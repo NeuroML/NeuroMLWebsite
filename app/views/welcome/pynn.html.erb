@@ -17,7 +17,7 @@
 						<!-- ENDS title -->
 						
 <p><a href="http://neuralensemble.org/trac/PyNN">PyNN</a> and NeuroML are independently developed approaches to allow portability of models across simulators.
-    These reflect 2 differing approaches to model specification:
+    These reflect 2 differing approaches to model specification:</p>
     <ul>
         <li><b>Declarative specification:</b> the structure of the model is explicitly specified in a structured model exchange format. XML is well suited as a basis
             for a language in this format, and is used by NeuroML as well as <a href="http://www.sbml.org">SBML</a> and <a href="http://www.CellML.org">CellML</a>.</li>
@@ -28,8 +28,7 @@
     </ul>
 <br />
     <p>These approaches are complementary, and a number of options are available to allow interaction between PyNN and model components in NeuroML
-        (in particular <a href="alpha_schema">NeuroML v2.0</a>).
-</p>
+        (in particular <a href="alpha_schema">NeuroML v2.0</a>).</p>
 
 <h3> Converting PyNN models to NeuroML 2</h3>
 
@@ -40,7 +39,7 @@ using the PyNN API and then run using
 <a href="http://www.nest-initiative.org/index.php/Main_Page">NEST</a>,
 <a href="http://www.sourceforge.net/projects/pcsim">PCSIM</a>,
  <a href="http://brian.di.ens.fr">Brian</a>
- or <a href="tool_support#MOOSE">MOOSE</a>, by replacing <p>
+ or <a href="tool_support#MOOSE">MOOSE</a>, by replacing </p>
     
 <p class="code">from pyNN.<b>neuron</b> import *<br/><br/><i>...simulator independent Python commands...</i></p>
 
@@ -155,7 +154,7 @@ The output of this (<b>PyNN2NeuroMLv2.nml</b>) is shown below. Note that all cel
 <img src="images/pynnlems.png"
                     alt="PyNN script run on NEST and converted for use in LEMS" />
 
-<br>
+<br/>
 This functionality is possible since the dynamical behaviour of the <a href="http://neuralensemble.org/trac/PyNN/wiki/StandardModels">standard PyNN neuron models</a> has been
 described in LEMS, see <a href="https://sourceforge.net/apps/trac/neuroml/browser/NeuroML2/NeuroML2CoreTypes/PyNN.xml">NeuroML2CoreTypes/PyNN.xml</a> for more detail.
 <br /><br />
@@ -171,7 +170,8 @@ This functionality is still in development. Key issues at the moment include:
     
 
 <h3> Converting NeuroML 2 models to PyNN</h3>
-<p>The key issue here is that NeuroML 2 can describe a much wider range of cell models than the <a href="http://neuralensemble.org/trac/PyNN/wiki/StandardModels">standard PyNN neuron models</a>.</p>
+<p>The key issue here is that NeuroML 2 can describe a much wider range of cell models than the 
+    <a href="http://neuralensemble.org/trac/PyNN/wiki/StandardModels">standard PyNN neuron models</a>.</p>
 
 <p>The solution will be to generate code for, or natively interact with, each simulator to instantiate the cell models on that simulator.
 This is possible to a certain extent already with NEURON as the <a href="compatibility#NEURON">example here shows</a>. </p>
@@ -180,7 +180,7 @@ This is possible to a certain extent already with NEURON as the <a href="compati
     load cells in NeuroML 2 (and their behaviour definitions in LEMS) and generate NeuronGroup descriptions in <a href="http://brian.di.ens.fr">Brian</a>
     to allow simulations in that simulator.</p>
 
-<br>
+<br/>
 						
 						
 								<div class="clear"></div>
