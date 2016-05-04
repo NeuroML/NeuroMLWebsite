@@ -34,4 +34,6 @@
 /.bundle
 /Gemfile.lock
 /Gemfile.local
-
+/app/views/layouts/welcome.html.erb~
+/app/views/welcome/getneuroml.html.erb~
+/app/views/welcome/tool_support.html.erb~
