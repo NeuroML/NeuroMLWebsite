@@ -15,7 +15,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="#">NeuroML v2beta3 Component Types</a>
+      <a class="brand" href="#">NeuroML v2beta4 Component Types</a>
       <div class="nav-collapse">
         <ul class="nav">
           <li><a href="Cells.html">Cells</a></li>
@@ -43,6 +43,7 @@
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#concentration">concentration</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#conductance">conductance</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#conductanceDensity">conductanceDensity</a><br/>
+      &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#conductance_per_voltage">conductance_per_voltage</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#current">current</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#currentDensity">currentDensity</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#idealGasConstantDims">idealGasConstantDims</a><br/>
@@ -72,6 +73,7 @@
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#M">M</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#Mohm">Mohm</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#S">S</a><br/>
+      &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#S_per_V">S_per_V</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#S_per_cm2">S_per_cm2</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#S_per_m2">S_per_m2</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#V">V</a><br/>
@@ -97,12 +99,15 @@
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#min">min</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#mol">mol</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#mol_per_cm3">mol_per_cm3</a><br/>
+      &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#mol_per_cm_per_uA_per_ms">mol_per_cm_per_uA_per_ms</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#mol_per_m3">mol_per_m3</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#mol_per_m_per_A_per_s">mol_per_m_per_A_per_s</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#ms">ms</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#nA">nA</a><br/>
+      &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#nA_ms_per_amol">nA_ms_per_amol</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#nF">nF</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#nS">nS</a><br/>
+      &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#nS_per_mV">nS_per_mV</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#ohm">ohm</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#ohm_cm">ohm_cm</a><br/>
       &nbsp;&nbsp<a href="NeuroMLCoreDimensions.html#ohm_m">ohm_m</a><br/>
@@ -128,10 +133,10 @@
     </div><!--/.well -->
     </div><!--/span-->
     <div class="span7">
-   <div class="alert alert-error">For more information on NeuroML 2 and LEMS see <a href="http://www.neuroml.org/neuromlv2">here</a>. <br/>Note: these descriptions have been updated to the latest    <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2">NeuroML v2beta3</a> definitions, using    <a href="https://github.com/LEMS/LEMS/tree/master/Schemas/LEMS">the latest version of LEMS</a>!</div>
+   <div class="alert alert-error">For more information on NeuroML 2 and LEMS see <a href="http://www.neuroml.org/neuromlv2">here</a>. <br/>Note: these descriptions have been updated to the latest    <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2">NeuroML v2beta4</a> definitions, using    <a href="https://github.com/LEMS/LEMS/tree/master/Schemas/LEMS">the latest version of LEMS</a>!</div>
     <table class="table table-bordered"><tr><td ><h3>NeuroMLCoreDimensions</h3></td></tr>
     <tr><td><span  style="color:dimgrey"><i>NeuroML2 ComponentType definitions from NeuroMLCoreDimensions.xml </i></span></td></tr>
-    <tr><td>Original LEMS ComponentType definitions: <a href="https://github.com/NeuroML/NeuroML2/blob/master/NeuroML2CoreTypes/NeuroMLCoreDimensions.xml">NeuroMLCoreDimensions.xml</a><br/>    Schema against which NeuroML based on these should be valid: <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2/NeuroML_v2beta3.xsd">NeuroML_v2beta3.xsd</a></td></tr>
+    <tr><td>Original LEMS ComponentType definitions: <a href="https://github.com/NeuroML/NeuroML2/blob/master/NeuroML2CoreTypes/NeuroMLCoreDimensions.xml">NeuroMLCoreDimensions.xml</a><br/>    Schema against which NeuroML based on these should be valid: <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2/NeuroML_v2beta4.xsd">NeuroML_v2beta4.xsd</a></td></tr>
     </table><br/>
 <a name="area">&nbsp;</a>
 <table class="table table-bordered">
@@ -187,6 +192,7 @@ T<sup>1</sup> I<sup>1</sup> <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a h
   <tr>
     <td>
 T<sup>1</sup> I<sup>1</sup> N<sup>-1</sup> <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#C_per_mol'>C_per_mol</a>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#nA_ms_per_amol'>nA_ms_per_amol</a>
     </td>
   </tr>
 </table>
@@ -235,6 +241,20 @@ M<sup>-1</sup> L<sup>-2</sup> T<sup>3</sup> I<sup>2</sup> <br/><br/>&nbsp;&nbsp;
 M<sup>-1</sup> L<sup>-4</sup> T<sup>3</sup> I<sup>2</sup> <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#S_per_cm2'>S_per_cm2</a>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#S_per_m2'>S_per_m2</a>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#mS_per_cm2'>mS_per_cm2</a>
+    </td>
+  </tr>
+</table>
+<a name="conductance_per_voltage">&nbsp;</a>
+<table class="table table-bordered">
+  <tr>
+    <td>
+       <b>conductance_per_voltage</b>
+    </td>
+  </tr>
+  <tr>
+    <td>
+M<sup>-2</sup> L<sup>-4</sup> T<sup>6</sup> I<sup>3</sup> <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#S_per_V'>S_per_V</a>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#nS_per_mV'>nS_per_mV</a>
     </td>
   </tr>
 </table>
@@ -383,7 +403,8 @@ M<sup>2</sup> L<sup>2</sup> T<sup>-3</sup> I<sup>-2</sup> <br/><br/>&nbsp;&nbsp;
   </tr>
   <tr>
     <td>
-L<sup>-1</sup> T<sup>-1</sup> I<sup>-1</sup> N<sup>1</sup> <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#mol_per_m_per_A_per_s'>mol_per_m_per_A_per_s</a>
+L<sup>-1</sup> T<sup>-1</sup> I<sup>-1</sup> N<sup>1</sup> <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#mol_per_cm_per_uA_per_ms'>mol_per_cm_per_uA_per_ms</a>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#mol_per_m_per_A_per_s'>mol_per_m_per_A_per_s</a>
     </td>
   </tr>
 </table>
@@ -523,7 +544,7 @@ L<sup>3</sup> <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#cm3'>cm3
   <tr>
     <td>
 &nbsp;&nbsp;&nbsp;&nbsp;Dimension: <a href="NeuroMLCoreDimensions.html#charge_per_mole">charge_per_mole</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;Power of 10: 0<br/>
-    </td>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;1 C_per_mol = 1e-06 <a href='#nA_ms_per_amol'>nA_ms_per_amol</a>    </td>
   </tr>
 </table>
 <a name="F">&nbsp;</a>
@@ -628,6 +649,19 @@ L<sup>3</sup> <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#cm3'>cm3
     <td>
 &nbsp;&nbsp;&nbsp;&nbsp;Dimension: <a href="NeuroMLCoreDimensions.html#conductance">conductance</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;Power of 10: 0<br/>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;1 S = 1e+12 <a href='#pS'>pS</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;1 S = 1000000000.0 <a href='#nS'>nS</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;1 S = 1000000.0 <a href='#uS'>uS</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;1 S = 1000.0 <a href='#mS'>mS</a>    </td>
+  </tr>
+</table>
+<a name="S_per_V">&nbsp;</a>
+<table class="table table-bordered">
+  <tr>
+    <td>
+       <b>S_per_V</b>
+    </td>
+  </tr>
+  <tr>
+    <td>
+&nbsp;&nbsp;&nbsp;&nbsp;Dimension: <a href="NeuroMLCoreDimensions.html#conductance_per_voltage">conductance_per_voltage</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;Power of 10: 0<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;1 S_per_V = 1000000.0 <a href='#nS_per_mV'>nS_per_mV</a>    </td>
   </tr>
 </table>
 <a name="S_per_cm2">&nbsp;</a>
@@ -955,6 +989,19 @@ L<sup>3</sup> <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#cm3'>cm3
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;1 mol_per_cm3 = 1000000.0 <a href='#mol_per_m3'>mol_per_m3</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;1 mol_per_cm3 = 1000000.0 <a href='#mM'>mM</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;1 mol_per_cm3 = 1000.0 <a href='#M'>M</a>    </td>
   </tr>
 </table>
+<a name="mol_per_cm_per_uA_per_ms">&nbsp;</a>
+<table class="table table-bordered">
+  <tr>
+    <td>
+       <b>mol_per_cm_per_uA_per_ms</b>
+    </td>
+  </tr>
+  <tr>
+    <td>
+&nbsp;&nbsp;&nbsp;&nbsp;Dimension: <a href="NeuroMLCoreDimensions.html#rho_factor">rho_factor</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;Power of 10: 11<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;1 mol_per_cm_per_uA_per_ms = 1e+11 <a href='#mol_per_m_per_A_per_s'>mol_per_m_per_A_per_s</a>    </td>
+  </tr>
+</table>
 <a name="mol_per_m3">&nbsp;</a>
 <table class="table table-bordered">
   <tr>
@@ -978,7 +1025,7 @@ L<sup>3</sup> <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#cm3'>cm3
   <tr>
     <td>
 &nbsp;&nbsp;&nbsp;&nbsp;Dimension: <a href="NeuroMLCoreDimensions.html#rho_factor">rho_factor</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;Power of 10: 0<br/>
-    </td>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;1 mol_per_m_per_A_per_s = 1e-11 <a href='#mol_per_cm_per_uA_per_ms'>mol_per_cm_per_uA_per_ms</a>    </td>
   </tr>
 </table>
 <a name="ms">&nbsp;</a>
@@ -1007,6 +1054,19 @@ L<sup>3</sup> <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#cm3'>cm3
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;1 nA = 1e-09 <a href='#A'>A</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;1 nA = 0.001 <a href='#uA'>uA</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;1 nA = 1000.0 <a href='#pA'>pA</a>    </td>
   </tr>
 </table>
+<a name="nA_ms_per_amol">&nbsp;</a>
+<table class="table table-bordered">
+  <tr>
+    <td>
+       <b>nA_ms_per_amol</b>
+    </td>
+  </tr>
+  <tr>
+    <td>
+&nbsp;&nbsp;&nbsp;&nbsp;Dimension: <a href="NeuroMLCoreDimensions.html#charge_per_mole">charge_per_mole</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;Power of 10: 6<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;1 nA_ms_per_amol = 1000000.0 <a href='#C_per_mol'>C_per_mol</a>    </td>
+  </tr>
+</table>
 <a name="nF">&nbsp;</a>
 <table class="table table-bordered">
   <tr>
@@ -1031,6 +1091,19 @@ L<sup>3</sup> <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#cm3'>cm3
     <td>
 &nbsp;&nbsp;&nbsp;&nbsp;Dimension: <a href="NeuroMLCoreDimensions.html#conductance">conductance</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;Power of 10: -9<br/>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;1 nS = 1000.0 <a href='#pS'>pS</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;1 nS = 0.001 <a href='#uS'>uS</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;1 nS = 1e-09 <a href='#S'>S</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;1 nS = 1e-06 <a href='#mS'>mS</a>    </td>
+  </tr>
+</table>
+<a name="nS_per_mV">&nbsp;</a>
+<table class="table table-bordered">
+  <tr>
+    <td>
+       <b>nS_per_mV</b>
+    </td>
+  </tr>
+  <tr>
+    <td>
+&nbsp;&nbsp;&nbsp;&nbsp;Dimension: <a href="NeuroMLCoreDimensions.html#conductance_per_voltage">conductance_per_voltage</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;Power of 10: -6<br/>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;1 nS_per_mV = 1e-06 <a href='#S_per_V'>S_per_V</a>    </td>
   </tr>
 </table>
 <a name="ohm">&nbsp;</a>
@@ -1323,3 +1396,4 @@ L<sup>3</sup> <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Defined unit: <a href='#cm3'>cm3
 </div>
 </div>
 </body>
+

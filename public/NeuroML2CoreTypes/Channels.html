@@ -15,7 +15,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="#">NeuroML v2beta3 Component Types</a>
+      <a class="brand" href="#">NeuroML v2beta4 Component Types</a>
       <div class="nav-collapse">
         <ul class="nav">
           <li><a href="Cells.html">Cells</a></li>
@@ -76,49 +76,75 @@
   
 &nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#q10ConductanceScaling" title="A value for the conductance scaling which varies as a standard function of the difference between the current temperature, temperature, and the temperature at which the conductance was originally determined, experimentalTemp ">q10ConductanceScaling</a><br/>
   
+&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#baseConductanceScalingCaDependent" title="Base ComponentType for a scaling to apply to a gate's conductance which depends on Ca concentration. Usually a generic expression of caConc (so no standard, non-base form here). "><span  style="color:#85ACE1;font-style:italic">baseConductanceScalingCaDependent</span></a><br/>
+  
 <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#gateHHtauInf" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHtauInf</a><br/>
+&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#gate" title="Conveniently named baseGate ">gate</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span><a href="NeuroMLCoreCompTypes.html#notes" title="Human readable notes on a Component ">notes</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#gateHHtauInf" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHtauInf</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>timeCourse <a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>steadyState <a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>steadyState <a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>timeCourse <a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#gateHHratesTau" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHratesTau</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#gateHHratesTau" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHratesTau</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>timeCourse <a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>forwardRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>timeCourse <a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>forwardRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>reverseRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>reverseRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#gateHHratesTauInf" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHratesTauInf</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#gateHHratesTauInf" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHratesTauInf</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>timeCourse <a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>steadyState <a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>reverseRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>timeCourse <a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>steadyState <a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>forwardRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>forwardRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>reverseRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#gateHHratesInf" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHratesInf</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#gateHHInstantaneous" title="Gate which follows the general Hodgkin Huxley formalism but is instantaneous, so tau = 0 and gate follows exactly inf value ">gateHHInstantaneous</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>steadyState <a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>steadyState <a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>forwardRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#gateHHratesInf" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHratesInf</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>steadyState <a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>reverseRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>forwardRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>reverseRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#gateHHrates" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHrates</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>forwardRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>reverseRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#gateFractional" title="Gate composed of subgates contributing with fractional conductance ">gateFractional</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span><a href="Channels.html#subGate" title="Gate composed of subgates contributing with fractional conductance ">subGate</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span><a href="NeuroMLCoreCompTypes.html#notes" title="Human readable notes on a Component ">notes</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>steadyState <a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>timeCourse <a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
   
 &nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#gateKS" title="A gate which consists of multiple KSStates and KSTransitions giving the rates of transition between them ">gateKS</a><br/>
   
@@ -138,63 +164,23 @@
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>rate <a href="Channels.html#baseHHRate" title="Base ComponentType for rate which follow one of the typical forms for rate equations in the standard HH formalism, using the parameters rate, midpoint and scale "><span  style="color:#85ACE1;font-style:italic">baseHHRate</span></a><br/>
   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#tauInfTransition" title="KS Transition specified in terms of time constant tau and steady state inf ">tauInfTransition</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>steadyState <a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>timeCourse <a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a><br/>
+  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#vHalfTransition" title="Transition which specifies both the forward and reverse rates of transition ">vHalfTransition</a><br/>
   
-&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#gateHHrates" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHrates</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>forwardRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>reverseRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
   
 <a href="Channels.html#baseIonChannel" title="Base for all ion channel ComponentTypes "><span  style="color:#85ACE1;font-style:italic">baseIonChannel</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#ionChannelHH" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta3 will remove one of these, probably ionChannelHH. ">ionChannelHH</a><br/>
+&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#ionChannelHH" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta4 should remove one of these, probably ionChannelHH. ">ionChannelHH</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#ionChannel" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta3 will remove one of these, probably ionChannelHH. ">ionChannel</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#ionChannel" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta4 should remove one of these, probably ionChannelHH. ">ionChannel</a><br/>
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#ionChannelPassive" title="Simple passive ion channel where the constant conductance through the channel is equal to conductance ">ionChannelPassive</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span><a href="NeuroMLCoreCompTypes.html#annotation" title="Annotation... ">annotation</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>rdf:RDF <a href="NeuroMLCoreCompTypes.html#rdf_RDF" title="Work in progress... ">rdf_RDF</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>rdf:Description <a href="NeuroMLCoreCompTypes.html#rdf_Description" title="Work in progress... ">rdf_Description</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:encodes <a href="NeuroMLCoreCompTypes.html#bqbiol_encodes" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_encodes</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:hasPart <a href="NeuroMLCoreCompTypes.html#bqbiol_hasPart" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_hasPart</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:isEncodedBy <a href="NeuroMLCoreCompTypes.html#bqbiol_isEncodedBy" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_isEncodedBy</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:occursIn <a href="NeuroMLCoreCompTypes.html#bqbiol_occursIn" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_occursIn</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:isVersionOf <a href="NeuroMLCoreCompTypes.html#bqbiol_isVersionOf" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_isVersionOf</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:hasVersion <a href="NeuroMLCoreCompTypes.html#bqbiol_hasVersion" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_hasVersion</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:isPartOf <a href="NeuroMLCoreCompTypes.html#bqbiol_isPartOf" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_isPartOf</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:hasTaxon <a href="NeuroMLCoreCompTypes.html#bqbiol_hasTaxon" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_hasTaxon</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:is <a href="NeuroMLCoreCompTypes.html#bqbiol_is" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_is</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:isDescribedBy <a href="NeuroMLCoreCompTypes.html#bqbiol_isDescribedBy" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_isDescribedBy</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:isPropertyOf <a href="NeuroMLCoreCompTypes.html#bqbiol_isPropertyOf" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_isPropertyOf</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:isHomologTo <a href="NeuroMLCoreCompTypes.html#bqbiol_isHomologTo" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_isHomologTo</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqmodel:isDerivedFrom <a href="NeuroMLCoreCompTypes.html#bqmodel_isDerivedFrom" title="See http://co.mbine.org/standards/qualifiers ">bqmodel_isDerivedFrom</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:hasProperty <a href="NeuroMLCoreCompTypes.html#bqbiol_hasProperty" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_hasProperty</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqmodel:isDescribedBy <a href="NeuroMLCoreCompTypes.html#bqmodel_isDescribedBy" title="See http://co.mbine.org/standards/qualifiers ">bqmodel_isDescribedBy</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqmodel:is <a href="NeuroMLCoreCompTypes.html#bqmodel_is" title="See http://co.mbine.org/standards/qualifiers ">bqmodel_is</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span><a href="NeuroMLCoreCompTypes.html#property" title="Property in Annotation... ">property</a><br/>
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Channels.html#ionChannelKS" title="A kinetic scheme based ion channel with multiple gateKSs, each of which consists of multiple KSStates and KSTransitions giving the rates of transition between them ">ionChannelKS</a><br/>
   
@@ -204,63 +190,59 @@
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>transitions <a href="Channels.html#KSTransition" title="Specified the forward and reverse rates of transition between two KSStates in a gateKS ">KSTransition</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>gatesHHrates <a href="Channels.html#gateHHrates" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHrates</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>forwardRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>reverseRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>gatesHHratesInf <a href="Channels.html#gateHHratesInf" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHratesInf</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>steadyState <a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>forwardRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>reverseRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>gatesHHratesTauInf <a href="Channels.html#gateHHratesTauInf" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHratesTauInf</a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>timeCourse <a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>reverseRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>steadyState <a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a><br/>
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>forwardRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>gates <a href="Channels.html#gate" title="Conveniently named baseGate ">gate</a><br/>
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>conductanceScaling <a href="Channels.html#baseConductanceScaling" title="Base ComponentType for a scaling to apply to a gate's conductance, e.g. temperature dependent scaling "><span  style="color:#85ACE1;font-style:italic">baseConductanceScaling</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>gatesHHratesTau <a href="Channels.html#gateHHratesTau" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHratesTau</a><br/>
+&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span><a href="NeuroMLCoreCompTypes.html#annotation" title="Annotation... ">annotation</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>timeCourse <a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>rdf:RDF <a href="NeuroMLCoreCompTypes.html#rdf_RDF" title="Work in progress... ">rdf_RDF</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>forwardRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>rdf:Description <a href="NeuroMLCoreCompTypes.html#rdf_Description" title="Work in progress... ">rdf_Description</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:encodes <a href="NeuroMLCoreCompTypes.html#bqbiol_encodes" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_encodes</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>reverseRate <a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:hasPart <a href="NeuroMLCoreCompTypes.html#bqbiol_hasPart" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_hasPart</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>gatesHHtauInf <a href="Channels.html#gateHHtauInf" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHtauInf</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:isEncodedBy <a href="NeuroMLCoreCompTypes.html#bqbiol_isEncodedBy" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_isEncodedBy</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>timeCourse <a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:occursIn <a href="NeuroMLCoreCompTypes.html#bqbiol_occursIn" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_occursIn</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>q10Settings <a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:isVersionOf <a href="NeuroMLCoreCompTypes.html#bqbiol_isVersionOf" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_isVersionOf</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>steadyState <a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:hasVersion <a href="NeuroMLCoreCompTypes.html#bqbiol_hasVersion" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_hasVersion</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:isPartOf <a href="NeuroMLCoreCompTypes.html#bqbiol_isPartOf" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_isPartOf</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:hasTaxon <a href="NeuroMLCoreCompTypes.html#bqbiol_hasTaxon" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_hasTaxon</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:is <a href="NeuroMLCoreCompTypes.html#bqbiol_is" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_is</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:isDescribedBy <a href="NeuroMLCoreCompTypes.html#bqbiol_isDescribedBy" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_isDescribedBy</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:isPropertyOf <a href="NeuroMLCoreCompTypes.html#bqbiol_isPropertyOf" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_isPropertyOf</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:isHomologTo <a href="NeuroMLCoreCompTypes.html#bqbiol_isHomologTo" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_isHomologTo</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqmodel:isDerivedFrom <a href="NeuroMLCoreCompTypes.html#bqmodel_isDerivedFrom" title="See http://co.mbine.org/standards/qualifiers ">bqmodel_isDerivedFrom</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqbiol:hasProperty <a href="NeuroMLCoreCompTypes.html#bqbiol_hasProperty" title="See http://co.mbine.org/standards/qualifiers ">bqbiol_hasProperty</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqmodel:isDescribedBy <a href="NeuroMLCoreCompTypes.html#bqmodel_isDescribedBy" title="See http://co.mbine.org/standards/qualifiers ">bqmodel_isDescribedBy</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span>bqmodel:is <a href="NeuroMLCoreCompTypes.html#bqmodel_is" title="See http://co.mbine.org/standards/qualifiers ">bqmodel_is</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span><a href="NeuroMLCoreCompTypes.html#property" title="Property in Annotation... ">property</a><br/>
   
     </div><!--/.well -->
     </div><!--/span-->
     <div class="span7">
-   <div class="alert alert-error">For more information on NeuroML 2 and LEMS see <a href="http://www.neuroml.org/neuromlv2">here</a>. <br/>Note: these descriptions have been updated to the latest    <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2">NeuroML v2beta3</a> definitions, using    <a href="https://github.com/LEMS/LEMS/tree/master/Schemas/LEMS">the latest version of LEMS</a>!</div>
+   <div class="alert alert-error">For more information on NeuroML 2 and LEMS see <a href="http://www.neuroml.org/neuromlv2">here</a>. <br/>Note: these descriptions have been updated to the latest    <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2">NeuroML v2beta4</a> definitions, using    <a href="https://github.com/LEMS/LEMS/tree/master/Schemas/LEMS">the latest version of LEMS</a>!</div>
     <table class="table table-bordered"><tr><td ><h3>Channels</h3></td></tr>
     <tr><td><span  style="color:dimgrey"><i>NeuroML2 ComponentType definitions from Channels.xml </i></span></td></tr>
-    <tr><td>Original LEMS ComponentType definitions: <a href="https://github.com/NeuroML/NeuroML2/blob/master/NeuroML2CoreTypes/Channels.xml">Channels.xml</a><br/>    Schema against which NeuroML based on these should be valid: <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2/NeuroML_v2beta3.xsd">NeuroML_v2beta3.xsd</a></td></tr>
+    <tr><td>Original LEMS ComponentType definitions: <a href="https://github.com/NeuroML/NeuroML2/blob/master/NeuroML2CoreTypes/Channels.xml">Channels.xml</a><br/>    Schema against which NeuroML based on these should be valid: <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2/NeuroML_v2beta4.xsd">NeuroML_v2beta4.xsd</a></td></tr>
     </table><br/>
 <a name="baseVoltageDepRate">&nbsp;</a>
 <table class="table table-bordered">
@@ -1041,6 +1023,13 @@
   </tr>
   <tr>
   <td width="70" rowspan='1'>
+    <span class="label label-info">Constants</span>
+  </td>
+    <td><b>TENDEGREES</b> = 10K</td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#temperature">temperature</a></td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='1'>
     <span class="label label-info">Exposures</span>
   </td>
     <td style="color:darkgrey"><b>factor</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseConductanceScaling" title="Base ComponentType for a scaling to apply to a gate's conductance, e.g. temperature dependent scaling "><span  style="color:#85ACE1;font-style:italic">baseConductanceScaling</span></a>)</td>
@@ -1059,11 +1048,41 @@
   </td>
 <td colspan='2'>
 <span class="label">Derived Variables</span><br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>factor</b> = q10Factor^((temperature - experimentalTemp)/10)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>factor</b>)
+&nbsp;&nbsp;&nbsp;&nbsp;<b>factor</b> = q10Factor^((temperature - experimentalTemp)/TENDEGREES)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>factor</b>)
 <br/>
 <br/>
 </td>
 </tr>
+</table>
+
+<a name="baseConductanceScalingCaDependent">&nbsp;</a>
+<table class="table table-bordered">
+  <tr>
+    <td colspan='3'>
+       <b><span  style="color:dimgrey;font-style:italic">baseConductanceScalingCaDependent</span></b>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#baseConductanceScaling" title="Base ComponentType for a scaling to apply to a gate's conductance, e.g. temperature dependent scaling "><span  style="color:#85ACE1;font-style:italic">baseConductanceScaling</span></a></p>    </td>
+  </tr>
+  <tr>
+    <td colspan='3'>
+      <span  style="color:dimgrey"><i>Base ComponentType for a scaling to apply to a gate's conductance which depends on Ca concentration. Usually a generic expression of <b>caConc</b> (so no standard, non-base form here). </i></span>    </td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-info">Exposures</span>
+  </td>
+    <td style="color:darkgrey"><b>factor</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseConductanceScaling" title="Base ComponentType for a scaling to apply to a gate's conductance, e.g. temperature dependent scaling "><span  style="color:#85ACE1;font-style:italic">baseConductanceScaling</span></a>)</td>
+    <td width="100">Dimensionless</td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='2'>
+    <span class="label label-info">Requirements</span>
+  </td>
+    <td><b>caConc</b></td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
+  </tr>
+    <td style="color:darkgrey"><b>temperature</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseConductanceScaling" title="Base ComponentType for a scaling to apply to a gate's conductance, e.g. temperature dependent scaling "><span  style="color:#85ACE1;font-style:italic">baseConductanceScaling</span></a>)</td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#temperature">temperature</a></td>
+  </tr>
 </table>
 
 <a name="baseGate">&nbsp;</a>
@@ -1085,6 +1104,13 @@
     <td width="100">Dimensionless</td>
   </tr>
   <tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-success">Child elements</span>
+  </td>
+    <td><b>notes</b></td>
+    <td width="100"><a href="NeuroMLCoreCompTypes.html#notes" title="Human readable notes on a Component ">notes</a></td>
+  </tr>
+  <tr>
   <td width="70" rowspan='2'>
     <span class="label label-info">Exposures</span>
   </td>
@@ -1096,12 +1122,42 @@
   </tr>
 </table>
 
+<a name="gate">&nbsp;</a>
+<table class="table table-bordered">
+  <tr>
+    <td colspan='3'>
+       <b>gate</b>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a></p>    </td>
+  </tr>
+  <tr>
+    <td colspan='3'>
+      <span  style="color:dimgrey"><i>Conveniently named baseGate </i></span>    </td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-success">Parameters</span>
+  </td>
+    <td style="color:darkgrey"><b>instances</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a>)</td>
+    <td width="100">Dimensionless</td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='2'>
+    <span class="label label-info">Exposures</span>
+  </td>
+    <td style="color:darkgrey"><b>fcond</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a>)</td>
+    <td width="100">Dimensionless</td>
+  </tr>
+    <td style="color:darkgrey"><b>q</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a>)</td>
+    <td width="100">Dimensionless</td>
+  </tr>
+</table>
+
 <a name="gateHHrates">&nbsp;</a>
 <table class="table table-bordered">
   <tr>
     <td colspan='3'>
        <b>gateHHrates</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#gate" title="Conveniently named baseGate ">gate</a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
@@ -1115,20 +1171,20 @@
     <td width="100">Dimensionless</td>
   </tr>
   <tr>
-  <td width="70" rowspan='4'>
+  <td width="70" rowspan='2'>
     <span class="label label-success">Child elements</span>
   </td>
-    <td><b>notes</b></td>
-    <td width="100"><a href="NeuroMLCoreCompTypes.html#notes" title="Human readable notes on a Component ">notes</a></td>
-  </tr>
     <td><b>forwardRate</b></td>
     <td width="100"><a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a></td>
   </tr>
-    <td><b>q10Settings</b></td>
-    <td width="100"><a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a></td>
-  </tr>
     <td><b>reverseRate</b></td>
     <td width="100"><a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a></td>
+  </tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-success">Children elements</span>
+  </td>
+    <td><b>q10Settings</b></td>
+    <td width="100"><a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a></td>
   </tr>
   <tr>
   <td width="70" rowspan='7'>
@@ -1172,7 +1228,7 @@
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>fcond</b> = q^instances&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>fcond</b>)
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>rateScale</b> = q10Settings->q10 (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>rateScale</b>)
+&nbsp;&nbsp;&nbsp;&nbsp;<b>rateScale</b> = q10Settings[*]->q10 (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>rateScale</b>)
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>beta</b> = reverseRate->r&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>beta</b>)
 <br/>
@@ -1193,7 +1249,7 @@
   <tr>
     <td colspan='3'>
        <b>gateHHtauInf</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#gate" title="Conveniently named baseGate ">gate</a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
@@ -1207,20 +1263,20 @@
     <td width="100">Dimensionless</td>
   </tr>
   <tr>
-  <td width="70" rowspan='4'>
+  <td width="70" rowspan='2'>
     <span class="label label-success">Child elements</span>
   </td>
-    <td><b>notes</b></td>
-    <td width="100"><a href="NeuroMLCoreCompTypes.html#notes" title="Human readable notes on a Component ">notes</a></td>
+    <td><b>steadyState</b></td>
+    <td width="100"><a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a></td>
   </tr>
     <td><b>timeCourse</b></td>
     <td width="100"><a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a></td>
   </tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-success">Children elements</span>
+  </td>
     <td><b>q10Settings</b></td>
     <td width="100"><a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a></td>
-  </tr>
-    <td><b>steadyState</b></td>
-    <td width="100"><a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a></td>
   </tr>
   <tr>
   <td width="70" rowspan='5'>
@@ -1256,7 +1312,7 @@
 <span class="label">Derived Variables</span><br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>tau</b> = tauUnscaled / rateScale&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>tau</b>)
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>rateScale</b> = q10Settings->q10 (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>rateScale</b>)
+&nbsp;&nbsp;&nbsp;&nbsp;<b>rateScale</b> = q10Settings[*]->q10 (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>rateScale</b>)
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>inf</b> = steadyState->x&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>inf</b>)
 <br/>
@@ -1271,12 +1327,79 @@
 </tr>
 </table>
 
+<a name="gateHHInstantaneous">&nbsp;</a>
+<table class="table table-bordered">
+  <tr>
+    <td colspan='3'>
+       <b>gateHHInstantaneous</b>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#gate" title="Conveniently named baseGate ">gate</a></p>    </td>
+  </tr>
+  <tr>
+    <td colspan='3'>
+      <span  style="color:dimgrey"><i>Gate which follows the general Hodgkin Huxley formalism but is instantaneous, so tau = 0 and gate follows exactly inf value </i></span>    </td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-success">Parameters</span>
+  </td>
+    <td style="color:darkgrey"><b>instances</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a>)</td>
+    <td width="100">Dimensionless</td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-success">Child elements</span>
+  </td>
+    <td><b>steadyState</b></td>
+    <td width="100"><a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a></td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-info">Constants</span>
+  </td>
+    <td><b>SEC</b> = 1 s</td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#time">time</a></td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='4'>
+    <span class="label label-info">Exposures</span>
+  </td>
+    <td style="color:darkgrey"><b>fcond</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a>)</td>
+    <td width="100">Dimensionless</td>
+  </tr>
+    <td><b>inf</b></td>
+    <td width="100">Dimensionless</td>
+  </tr>
+    <td style="color:darkgrey"><b>q</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a>)</td>
+    <td width="100">Dimensionless</td>
+  </tr>
+    <td><b>tau</b></td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#time">time</a></td>
+  </tr>
+<tr>
+  <td width="70" rowspan='1'>
+    <span class="label ">Dynamics</span>
+  </td>
+<td colspan='2'>
+<span class="label">Derived Variables</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>q</b> = inf&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>q</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>tau</b> = 0 * SEC&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>tau</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>inf</b> = steadyState->x&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>inf</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>fcond</b> = q^instances&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>fcond</b>)
+<br/>
+<br/>
+</td>
+</tr>
+</table>
+
 <a name="gateHHratesTau">&nbsp;</a>
 <table class="table table-bordered">
   <tr>
     <td colspan='3'>
        <b>gateHHratesTau</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#gate" title="Conveniently named baseGate ">gate</a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
@@ -1290,23 +1413,23 @@
     <td width="100">Dimensionless</td>
   </tr>
   <tr>
-  <td width="70" rowspan='5'>
+  <td width="70" rowspan='3'>
     <span class="label label-success">Child elements</span>
   </td>
     <td><b>timeCourse</b></td>
     <td width="100"><a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a></td>
   </tr>
-    <td><b>notes</b></td>
-    <td width="100"><a href="NeuroMLCoreCompTypes.html#notes" title="Human readable notes on a Component ">notes</a></td>
-  </tr>
     <td><b>forwardRate</b></td>
     <td width="100"><a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a></td>
   </tr>
-    <td><b>q10Settings</b></td>
-    <td width="100"><a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a></td>
-  </tr>
     <td><b>reverseRate</b></td>
     <td width="100"><a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a></td>
+  </tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-success">Children elements</span>
+  </td>
+    <td><b>q10Settings</b></td>
+    <td width="100"><a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a></td>
   </tr>
   <tr>
   <td width="70" rowspan='7'>
@@ -1350,7 +1473,7 @@
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>fcond</b> = q^instances&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>fcond</b>)
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>rateScale</b> = q10Settings->q10 (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>rateScale</b>)
+&nbsp;&nbsp;&nbsp;&nbsp;<b>rateScale</b> = q10Settings[*]->q10 (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>rateScale</b>)
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>beta</b> = reverseRate->r&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>beta</b>)
 <br/>
@@ -1372,7 +1495,7 @@
   <tr>
     <td colspan='3'>
        <b>gateHHratesInf</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#gate" title="Conveniently named baseGate ">gate</a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
@@ -1386,23 +1509,23 @@
     <td width="100">Dimensionless</td>
   </tr>
   <tr>
-  <td width="70" rowspan='5'>
+  <td width="70" rowspan='3'>
     <span class="label label-success">Child elements</span>
   </td>
-    <td><b>notes</b></td>
-    <td width="100"><a href="NeuroMLCoreCompTypes.html#notes" title="Human readable notes on a Component ">notes</a></td>
-  </tr>
     <td><b>steadyState</b></td>
     <td width="100"><a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a></td>
   </tr>
     <td><b>forwardRate</b></td>
     <td width="100"><a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a></td>
   </tr>
-    <td><b>q10Settings</b></td>
-    <td width="100"><a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a></td>
-  </tr>
     <td><b>reverseRate</b></td>
     <td width="100"><a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a></td>
+  </tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-success">Children elements</span>
+  </td>
+    <td><b>q10Settings</b></td>
+    <td width="100"><a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a></td>
   </tr>
   <tr>
   <td width="70" rowspan='7'>
@@ -1446,7 +1569,7 @@
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>fcond</b> = q^instances&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>fcond</b>)
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>rateScale</b> = q10Settings->q10 (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>rateScale</b>)
+&nbsp;&nbsp;&nbsp;&nbsp;<b>rateScale</b> = q10Settings[*]->q10 (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>rateScale</b>)
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>beta</b> = reverseRate->r&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>beta</b>)
 <br/>
@@ -1467,7 +1590,7 @@
   <tr>
     <td colspan='3'>
        <b>gateHHratesTauInf</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#gate" title="Conveniently named baseGate ">gate</a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
@@ -1481,26 +1604,26 @@
     <td width="100">Dimensionless</td>
   </tr>
   <tr>
-  <td width="70" rowspan='6'>
+  <td width="70" rowspan='4'>
     <span class="label label-success">Child elements</span>
   </td>
-    <td><b>q10Settings</b></td>
-    <td width="100"><a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a></td>
+    <td><b>steadyState</b></td>
+    <td width="100"><a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a></td>
   </tr>
     <td><b>timeCourse</b></td>
     <td width="100"><a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a></td>
   </tr>
+    <td><b>forwardRate</b></td>
+    <td width="100"><a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a></td>
+  </tr>
     <td><b>reverseRate</b></td>
     <td width="100"><a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a></td>
   </tr>
-    <td><b>notes</b></td>
-    <td width="100"><a href="NeuroMLCoreCompTypes.html#notes" title="Human readable notes on a Component ">notes</a></td>
-  </tr>
-    <td><b>steadyState</b></td>
-    <td width="100"><a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a></td>
-  </tr>
-    <td><b>forwardRate</b></td>
-    <td width="100"><a href="Channels.html#baseVoltageDepRate" title="Base ComponentType for voltage dependent rate. Produces a time varying rate r which depends on v. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepRate</span></a></td>
+  <td width="70" rowspan='1'>
+    <span class="label label-success">Children elements</span>
+  </td>
+    <td><b>q10Settings</b></td>
+    <td width="100"><a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a></td>
   </tr>
   <tr>
   <td width="70" rowspan='7'>
@@ -1544,13 +1667,153 @@
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>fcond</b> = q^instances&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>fcond</b>)
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>rateScale</b> = q10Settings->q10 (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>rateScale</b>)
+&nbsp;&nbsp;&nbsp;&nbsp;<b>rateScale</b> = q10Settings[*]->q10 (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>rateScale</b>)
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>beta</b> = reverseRate->r&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>beta</b>)
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>alpha</b> = forwardRate->r&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>alpha</b>)
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>inf</b> = steadyState->x&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>inf</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>tauUnscaled</b> = timeCourse->t&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<br/>
+<span class="label">Time Derivatives</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;d <b>q</b> /dt = (inf - q) / tau<br/>
+<br/>
+</td>
+</tr>
+</table>
+
+<a name="gateFractional">&nbsp;</a>
+<table class="table table-bordered">
+  <tr>
+    <td colspan='3'>
+       <b>gateFractional</b>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#gate" title="Conveniently named baseGate ">gate</a></p>    </td>
+  </tr>
+  <tr>
+    <td colspan='3'>
+      <span  style="color:dimgrey"><i>Gate composed of subgates contributing with fractional conductance </i></span>    </td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-success">Parameters</span>
+  </td>
+    <td style="color:darkgrey"><b>instances</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a>)</td>
+    <td width="100">Dimensionless</td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='2'>
+    <span class="label label-success">Children elements</span>
+  </td>
+    <td><b>subGate</b></td>
+    <td width="100"><a href="Channels.html#subGate" title="Gate composed of subgates contributing with fractional conductance ">subGate</a></td>
+  </tr>
+    <td><b>q10Settings</b></td>
+    <td width="100"><a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a></td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='3'>
+    <span class="label label-info">Exposures</span>
+  </td>
+    <td style="color:darkgrey"><b>fcond</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a>)</td>
+    <td width="100">Dimensionless</td>
+  </tr>
+    <td style="color:darkgrey"><b>q</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a>)</td>
+    <td width="100">Dimensionless</td>
+  </tr>
+    <td><b>rateScale</b></td>
+    <td width="100">Dimensionless</td>
+  </tr>
+<tr>
+  <td width="70" rowspan='1'>
+    <span class="label ">Dynamics</span>
+  </td>
+<td colspan='2'>
+<span class="label">Derived Variables</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>q</b> = subGate[*]->qfrac (reduce method: add)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>q</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>rateScale</b> = q10Settings[*]->q10 (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>rateScale</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>fcond</b> = q^instances&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>fcond</b>)
+<br/>
+<br/>
+</td>
+</tr>
+</table>
+
+<a name="subGate">&nbsp;</a>
+<table class="table table-bordered">
+  <tr>
+    <td colspan='3'>
+       <b>subGate</b>
+    </td>
+  </tr>
+  <tr>
+    <td colspan='3'>
+      <span  style="color:dimgrey"><i>Gate composed of subgates contributing with fractional conductance </i></span>    </td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-success">Parameters</span>
+  </td>
+    <td><b>fractionalConductance</b></td>
+    <td width="100">Dimensionless</td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='3'>
+    <span class="label label-success">Child elements</span>
+  </td>
+    <td><b>notes</b></td>
+    <td width="100"><a href="NeuroMLCoreCompTypes.html#notes" title="Human readable notes on a Component ">notes</a></td>
+  </tr>
+    <td><b>steadyState</b></td>
+    <td width="100"><a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a></td>
+  </tr>
+    <td><b>timeCourse</b></td>
+    <td width="100"><a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a></td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='4'>
+    <span class="label label-info">Exposures</span>
+  </td>
+    <td><b>inf</b></td>
+    <td width="100">Dimensionless</td>
+  </tr>
+    <td><b>q</b></td>
+    <td width="100">Dimensionless</td>
+  </tr>
+    <td><b>qfrac</b></td>
+    <td width="100">Dimensionless</td>
+  </tr>
+    <td><b>tau</b></td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#time">time</a></td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-info">Requirements</span>
+  </td>
+    <td><b>rateScale</b></td>
+    <td width="100">Dimensionless</td>
+  </tr>
+<tr>
+  <td width="70" rowspan='1'>
+    <span class="label ">Dynamics</span>
+  </td>
+<td colspan='2'>
+<span class="label">State Variables</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>q</b>&nbsp;&nbsp;&nbsp;&nbsp;Dimensionless (exposed as <b>q</b>)
+<br/>
+<br/>
+<span class="label">On Start</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>q</b> = inf<br/>
+<br/>
+<span class="label">Derived Variables</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>tau</b> = tauUnscaled / rateScale&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>tau</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>inf</b> = steadyState->x&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>inf</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>qfrac</b> = q * fractionalConductance&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>qfrac</b>)
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>tauUnscaled</b> = timeCourse->t&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 <br/>
@@ -1580,6 +1843,22 @@
     <td width="100"><a href="NeuroMLCoreDimensions.html#conductance">conductance</a></td>
   </tr>
   <tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-success">Text fields</span>
+  </td>
+    <td colspan='2'><b>neuroLexId</b></td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='2'>
+    <span class="label label-success">Child elements</span>
+  </td>
+    <td><b>notes</b></td>
+    <td width="100"><a href="NeuroMLCoreCompTypes.html#notes" title="Human readable notes on a Component ">notes</a></td>
+  </tr>
+    <td><b>annotation</b></td>
+    <td width="100"><a href="NeuroMLCoreCompTypes.html#annotation" title="Annotation... ">annotation</a></td>
+  </tr>
+  <tr>
   <td width="70" rowspan='2'>
     <span class="label label-info">Exposures</span>
   </td>
@@ -1603,7 +1882,7 @@
   <tr>
     <td colspan='3'>
        <b>ionChannelPassive</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#ionChannel" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta3 will remove one of these, probably ionChannelHH. ">ionChannel</a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#ionChannel" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta4 should remove one of these, probably ionChannelHH. ">ionChannel</a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
@@ -1615,22 +1894,6 @@
   </td>
     <td style="color:darkgrey"><b>conductance</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseIonChannel" title="Base for all ion channel ComponentTypes "><span  style="color:#85ACE1;font-style:italic">baseIonChannel</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#conductance">conductance</a></td>
-  </tr>
-  <tr>
-  <td width="70" rowspan='1'>
-    <span class="label label-success">Text fields</span>
-  </td>
-    <td colspan='2'><b>neuroLexId</b></td>
-  </tr>
-  <tr>
-  <td width="70" rowspan='2'>
-    <span class="label label-success">Child elements</span>
-  </td>
-    <td><b>notes</b></td>
-    <td width="100"><a href="NeuroMLCoreCompTypes.html#notes" title="Human readable notes on a Component ">notes</a></td>
-  </tr>
-    <td><b>annotation</b></td>
-    <td width="100"><a href="NeuroMLCoreCompTypes.html#annotation" title="Annotation... ">annotation</a></td>
   </tr>
   <tr>
   <td width="70" rowspan='2'>
@@ -1673,7 +1936,7 @@
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>Note <a href="Channels.html#ionChannel" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta3 will remove one of these, probably ionChannelHH. ">ionChannel</a> and <a href="Channels.html#ionChannelHH" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta3 will remove one of these, probably ionChannelHH. ">ionChannelHH</a> are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta3 will remove one of these, probably ionChannelHH. </i></span>    </td>
+      <span  style="color:dimgrey"><i>Note <a href="Channels.html#ionChannel" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta4 should remove one of these, probably ionChannelHH. ">ionChannel</a> and <a href="Channels.html#ionChannelHH" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta4 should remove one of these, probably ionChannelHH. ">ionChannelHH</a> are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta4 should remove one of these, probably ionChannelHH. </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='1'>
@@ -1683,43 +1946,20 @@
     <td width="100"><a href="NeuroMLCoreDimensions.html#conductance">conductance</a></td>
   </tr>
   <tr>
-  <td width="70" rowspan='2'>
+  <td width="70" rowspan='1'>
     <span class="label label-success">Text fields</span>
   </td>
-    <td colspan='2'><b>neuroLexId</b></td>
-  </tr>
     <td colspan='2'><b>species</b></td>
   </tr>
   <tr>
   <td width="70" rowspan='2'>
-    <span class="label label-success">Child elements</span>
-  </td>
-    <td><b>notes</b></td>
-    <td width="100"><a href="NeuroMLCoreCompTypes.html#notes" title="Human readable notes on a Component ">notes</a></td>
-  </tr>
-    <td><b>annotation</b></td>
-    <td width="100"><a href="NeuroMLCoreCompTypes.html#annotation" title="Annotation... ">annotation</a></td>
-  </tr>
-  <td width="70" rowspan='6'>
     <span class="label label-success">Children elements</span>
   </td>
-    <td><b>gatesHHrates</b></td>
-    <td width="100"><a href="Channels.html#gateHHrates" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHrates</a></td>
-  </tr>
-    <td><b>gatesHHratesInf</b></td>
-    <td width="100"><a href="Channels.html#gateHHratesInf" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHratesInf</a></td>
-  </tr>
-    <td><b>gatesHHratesTauInf</b></td>
-    <td width="100"><a href="Channels.html#gateHHratesTauInf" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHratesTauInf</a></td>
+    <td><b>gates</b></td>
+    <td width="100"><a href="Channels.html#gate" title="Conveniently named baseGate ">gate</a></td>
   </tr>
     <td><b>conductanceScaling</b></td>
     <td width="100"><a href="Channels.html#baseConductanceScaling" title="Base ComponentType for a scaling to apply to a gate's conductance, e.g. temperature dependent scaling "><span  style="color:#85ACE1;font-style:italic">baseConductanceScaling</span></a></td>
-  </tr>
-    <td><b>gatesHHratesTau</b></td>
-    <td width="100"><a href="Channels.html#gateHHratesTau" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHratesTau</a></td>
-  </tr>
-    <td><b>gatesHHtauInf</b></td>
-    <td width="100"><a href="Channels.html#gateHHtauInf" title="Gate which follows the general Hodgkin Huxley formalism ">gateHHtauInf</a></td>
   </tr>
   <tr>
   <td width="70" rowspan='2'>
@@ -1744,16 +1984,12 @@
   </td>
 <td colspan='2'>
 <span class="label">Derived Variables</span><br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>fopenHHratesTauInf</b> = gatesHHratesTauInf[*]->fcond (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>fopen</b> = conductanceScale * fopenHHrates * fopenHHtauInf * fopenHHratesTau * fopenHHratesInf * fopenHHratesTauInf&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>fopen</b>)
+&nbsp;&nbsp;&nbsp;&nbsp;<b>conductanceScale</b> = conductanceScaling[*]->factor (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>fopen</b> = conductanceScale * fopen0&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>fopen</b>)
 <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>fopen0</b> = gates[*]->fcond (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>g</b> = conductance * fopen&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>g</b>)
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>fopenHHratesTau</b> = gatesHHratesTau[*]->fcond (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>conductanceScale</b> = conductanceScaling[*]->factor (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>fopenHHrates</b> = gatesHHrates[*]->fcond (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>fopenHHtauInf</b> = gatesHHtauInf[*]->fcond (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>fopenHHratesInf</b> = gatesHHratesInf[*]->fcond (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 <br/>
 </td>
 </tr>
@@ -1764,11 +2000,11 @@
   <tr>
     <td colspan='3'>
        <b>ionChannel</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#ionChannelHH" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta3 will remove one of these, probably ionChannelHH. ">ionChannelHH</a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#ionChannelHH" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta4 should remove one of these, probably ionChannelHH. ">ionChannelHH</a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>Note <a href="Channels.html#ionChannel" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta3 will remove one of these, probably ionChannelHH. ">ionChannel</a> and <a href="Channels.html#ionChannelHH" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta3 will remove one of these, probably ionChannelHH. ">ionChannelHH</a> are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta3 will remove one of these, probably ionChannelHH. </i></span>    </td>
+      <span  style="color:dimgrey"><i>Note <a href="Channels.html#ionChannel" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta4 should remove one of these, probably ionChannelHH. ">ionChannel</a> and <a href="Channels.html#ionChannelHH" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta4 should remove one of these, probably ionChannelHH. ">ionChannelHH</a> are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta4 should remove one of these, probably ionChannelHH. </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='1'>
@@ -1800,15 +2036,12 @@
   </td>
 <td colspan='2'>
 <span class="label">Derived Variables</span><br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>fopen</b> = conductanceScale * fopenHHrates * fopenHHtauInf * fopenHHratesTau * fopenHHratesInf&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>fopen</b>)
+&nbsp;&nbsp;&nbsp;&nbsp;<b>conductanceScale</b> = conductanceScaling[*]->factor (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>fopen</b> = conductanceScale * fopen0&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>fopen</b>)
 <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>fopen0</b> = gates[*]->fcond (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>g</b> = conductance * fopen&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>g</b>)
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>fopenHHratesTau</b> = gatesHHratesTau[*]->fcond (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>conductanceScale</b> = conductanceScaling[*]->factor (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>fopenHHrates</b> = gatesHHrates[*]->fcond (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>fopenHHtauInf</b> = gatesHHtauInf[*]->fcond (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>fopenHHratesInf</b> = gatesHHratesInf[*]->fcond (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 <br/>
 </td>
 </tr>
@@ -1831,13 +2064,6 @@
   </td>
     <td><b>relativeConductance</b></td>
     <td width="100">Dimensionless</td>
-  </tr>
-  <tr>
-  <td width="70" rowspan='1'>
-    <span class="label label-success">Child elements</span>
-  </td>
-    <td><b>notes</b></td>
-    <td width="100"><a href="NeuroMLCoreCompTypes.html#notes" title="Human readable notes on a Component ">notes</a></td>
   </tr>
   <tr>
   <td width="70" rowspan='2'>
@@ -1881,11 +2107,11 @@
   <td width="70" rowspan='2'>
     <span class="label label-success">Parameters</span>
   </td>
-    <td style="color:darkgrey"><b>relativeConductance</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#KSState" title="One of the states in which a gateKS can be. The rates of transitions between these states are given by KSTransitions ">KSState</a>)</td>
-    <td width="100">Dimensionless</td>
-  </tr>
     <td><b>relativeConductance</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#__dimension_inherited__">__dimension_inherited__</a></td>
+  </tr>
+    <td style="color:darkgrey"><b>relativeConductance</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#KSState" title="One of the states in which a gateKS can be. The rates of transitions between these states are given by KSTransitions ">KSState</a>)</td>
+    <td width="100">Dimensionless</td>
   </tr>
   <tr>
   <td width="70" rowspan='2'>
@@ -1937,7 +2163,7 @@
   <tr>
     <td colspan='3'>
        <b>ionChannelKS</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#ionChannel" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta3 will remove one of these, probably ionChannelHH. ">ionChannel</a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#ionChannel" title="Note ionChannel and ionChannelHH are currently functionally identical. This is needed since many existing examples use ionChannel, some use ionChannelHH. NeuroML v2beta4 should remove one of these, probably ionChannelHH. ">ionChannel</a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
@@ -2191,6 +2417,54 @@
 </tr>
 </table>
 
+<a name="tauInfTransition">&nbsp;</a>
+<table class="table table-bordered">
+  <tr>
+    <td colspan='3'>
+       <b>tauInfTransition</b>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Channels.html#KSTransition" title="Specified the forward and reverse rates of transition between two KSStates in a gateKS ">KSTransition</a></p>    </td>
+  </tr>
+  <tr>
+    <td colspan='3'>
+      <span  style="color:dimgrey"><i>KS Transition specified in terms of time constant ??? and steady state ??? </i></span>    </td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='2'>
+    <span class="label label-success">Child elements</span>
+  </td>
+    <td><b>steadyState</b></td>
+    <td width="100"><a href="Channels.html#baseVoltageDepVariable" title="Base ComponentType for voltage dependent variable  x, which depends on v. Can be used for inf/steady state of rate variable. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepVariable</span></a></td>
+  </tr>
+    <td><b>timeCourse</b></td>
+    <td width="100"><a href="Channels.html#baseVoltageDepTime" title="Base ComponentType for voltage dependent ComponentType producing value t with dimension time (e.g. for time course of rate variable). Note: time course would not normally be fit to exp/sigmoid etc. "><span  style="color:#85ACE1;font-style:italic">baseVoltageDepTime</span></a></td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='2'>
+    <span class="label label-info">Exposures</span>
+  </td>
+    <td style="color:darkgrey"><b>rf</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#KSTransition" title="Specified the forward and reverse rates of transition between two KSStates in a gateKS ">KSTransition</a>)</td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#per_time">per_time</a></td>
+  </tr>
+    <td style="color:darkgrey"><b>rr</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#KSTransition" title="Specified the forward and reverse rates of transition between two KSStates in a gateKS ">KSTransition</a>)</td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#per_time">per_time</a></td>
+  </tr>
+<tr>
+  <td width="70" rowspan='1'>
+    <span class="label ">Dynamics</span>
+  </td>
+<td colspan='2'>
+<span class="label">Derived Variables</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>tau</b> = timeCourse->t&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>inf</b> = steadyState->x&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>rf</b> = inf/tau&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>rf</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>rr</b> = (1-inf)/tau&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>rr</b>)
+<br/>
+<br/>
+</td>
+</tr>
+</table>
+
 <a name="gateKS">&nbsp;</a>
 <table class="table table-bordered">
   <tr>
@@ -2210,7 +2484,7 @@
     <td width="100">Dimensionless</td>
   </tr>
   <tr>
-  <td width="70" rowspan='2'>
+  <td width="70" rowspan='3'>
     <span class="label label-success">Children elements</span>
   </td>
     <td><b>states</b></td>
@@ -2219,14 +2493,20 @@
     <td><b>transitions</b></td>
     <td width="100"><a href="Channels.html#KSTransition" title="Specified the forward and reverse rates of transition between two KSStates in a gateKS ">KSTransition</a></td>
   </tr>
+    <td><b>q10Settings</b></td>
+    <td width="100"><a href="Channels.html#baseQ10Settings" title="Base ComponentType for a scaling to apply to gating variable time course, usually temperature dependent "><span  style="color:#85ACE1;font-style:italic">baseQ10Settings</span></a></td>
+  </tr>
   <tr>
-  <td width="70" rowspan='2'>
+  <td width="70" rowspan='3'>
     <span class="label label-info">Exposures</span>
   </td>
     <td style="color:darkgrey"><b>fcond</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a>)</td>
     <td width="100">Dimensionless</td>
   </tr>
     <td style="color:darkgrey"><b>q</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Channels.html#baseGate" title="Base ComponentType for a voltage and/or concentration dependent gate "><span  style="color:#85ACE1;font-style:italic">baseGate</span></a>)</td>
+    <td width="100">Dimensionless</td>
+  </tr>
+    <td><b>rateScale</b></td>
     <td width="100">Dimensionless</td>
   </tr>
 <tr>
@@ -2237,7 +2517,9 @@
 <span class="label">Derived Variables</span><br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>q</b> = states[*]->q (reduce method: add)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>q</b>)
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>fopen</b> = q^instances&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>fcond</b>)
+&nbsp;&nbsp;&nbsp;&nbsp;<b>rateScale</b> = q10Settings[*]->q10 (reduce method: multiply)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>rateScale</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>fcond</b> = q^instances&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>fcond</b>)
 <br/>
 <br/>
 </td>
@@ -2248,3 +2530,4 @@
 </div>
 </div>
 </body>
+
