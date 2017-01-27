@@ -489,6 +489,13 @@
 <span class="label">Derived Variables</span><br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>x</b> = (v - midpoint) / scale&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 <br/>
+<span class="label">Conditional Derived Variables</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF x != 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>r</b> = rate * x / (1 - exp(0 - x))&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>r</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF x = 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>r</b> = rate&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>r</b>)
+<br/>
+<br/>
+<br/>
 </td>
 </tr>
 </table>

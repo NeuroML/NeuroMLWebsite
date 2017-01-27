@@ -1466,6 +1466,11 @@
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>vpeer</b> = peer->v&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 <br/>
+<span class="label">Conditional Derived Variables</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF (1-inf) &gt; 1e-4 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>s_rate</b> = (inf - s)/tau&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;OTHERWISE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>s_rate</b> = 0&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<br/>
+<br/>
 <span class="label">Time Derivatives</span><br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;d <b>s</b> /dt = s_rate<br/>
 <br/>

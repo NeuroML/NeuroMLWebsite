@@ -953,6 +953,23 @@
 <span class="label">Derived Variables</span><br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>channelf</b> = ionChannel->fopen&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 <br/>
+<span class="label">Conditional Derived Variables</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF caConcExt &gt; 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>gDensity</b> = condDensity * channelf&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>gDensity</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF caConcExt &lt;= 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>gDensity</b> = 0&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>gDensity</b>)
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF caConcExt &gt; 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>erev</b> = (R * temperature / (zCa * F)) * log(caConcExt / caConc)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>erev</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF caConcExt &lt;= 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>erev</b> = 0&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>erev</b>)
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF caConcExt &gt; 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>iDensity</b> = gDensity * (erev - v)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>iDensity</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF caConcExt &lt;= 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>iDensity</b> = 0&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>iDensity</b>)
+<br/>
+<br/>
+<br/>
 </td>
 </tr>
 </table>
@@ -1036,6 +1053,23 @@
 <span class="label">Derived Variables</span><br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>channelf</b> = ionChannel->fopen&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 <br/>
+<span class="label">Conditional Derived Variables</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF caConcExt2 &gt; 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>gDensity</b> = condDensity * channelf&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>gDensity</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF caConcExt2 &lt;= 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>gDensity</b> = 0&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>gDensity</b>)
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF caConcExt2 &gt; 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>erev</b> = (R * temperature / (zCa * F)) * log(caConcExt2 / caConc2)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>erev</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF caConcExt2 &lt;= 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>erev</b> = 0&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>erev</b>)
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF caConcExt2 &gt; 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>iDensity</b> = gDensity * (erev - v)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>iDensity</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF caConcExt2 &lt;= 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>iDensity</b> = 0&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>iDensity</b>)
+<br/>
+<br/>
+<br/>
 </td>
 </tr>
 </table>
@@ -1114,6 +1148,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<b>K</b> = (zCa * F) / (R * temperature)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>channelf</b> = ionChannel->fopen&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>expKv</b> = exp(-1 * K * v)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<br/>
+<span class="label">Conditional Derived Variables</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF caConcExt &gt; 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>iDensity</b> = -1 * channelf * permeability * zCa * F * K * v * ( caConc - (caConcExt * expKv) ) / (1 - expKv)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>iDensity</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF caConcExt &lt;= 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>iDensity</b> = 0&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>iDensity</b>)
+<br/>
+<br/>
 <br/>
 </td>
 </tr>
@@ -1201,6 +1242,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<b>T</b> = temperature / TEMP_SCALE&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>ca_conc_ext</b> = caConcExt / CONC_SCALE&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>ca_conc_i</b> = caConc / CONC_SCALE&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<br/>
+<span class="label">Conditional Derived Variables</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF V/tmp = 0. THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>pOpen</b> = tmp * 1e-3 * (1 - ((ca_conc_i/ca_conc_ext) * exp(V/tmp))) * (1 - (V/tmp)/2)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF V/tmp != 0. THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>pOpen</b> = tmp * 1e-3 * (1 - ((ca_conc_i/ca_conc_ext) * exp(V/tmp))) * ((V/tmp) / (exp(V/tmp) - 1))&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF ca_conc_ext &gt; 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>iDensity</b> = gDensity * pOpen&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>iDensity</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF ca_conc_ext &lt;= 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>iDensity</b> = 0&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>iDensity</b>)
+<br/>
+<br/>
 <br/>
 </td>
 </tr>
@@ -1584,6 +1635,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<b>dz</b> = distal->zLength&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>dx</b> = distal->xLength&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>dy</b> = distal->yLength&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<br/>
+<span class="label">Conditional Derived Variables</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF length = 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>surfaceArea</b> = 4 * radDist * radDist * 3.14159265&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>surfaceArea</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF length &gt; 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>surfaceArea</b> = 2 * radDist * 3.14159265 * length&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>surfaceArea</b>)
+<br/>
+<br/>
 <br/>
 </td>
 </tr>
@@ -2062,10 +2120,10 @@
     <td><b>totChanCurrent</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td><b>totSpecCap</b></td>
+    <td style="color:darkgrey"><b>totSpecCap</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#specificCapacitance">specificCapacitance</a></td>
   </tr>
-    <td style="color:darkgrey"><b>totSpecCap</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a>)</td>
+    <td><b>totSpecCap</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#specificCapacitance">specificCapacitance</a></td>
   </tr>
   <tr>
@@ -2265,10 +2323,10 @@
     <td><b>caConc2</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td style="color:darkgrey"><b>caConcExt</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a>)</td>
+    <td><b>caConcExt</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td><b>caConcExt</b></td>
+    <td style="color:darkgrey"><b>caConcExt</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
     <td><b>caConcExt2</b></td>
@@ -2531,10 +2589,10 @@
     <td style="color:darkgrey"><b>initialExtConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td><b>surfaceArea</b></td>
+    <td style="color:darkgrey"><b>surfaceArea</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#area">area</a></td>
   </tr>
-    <td style="color:darkgrey"><b>surfaceArea</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td><b>surfaceArea</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#area">area</a></td>
   </tr>
 <tr>
@@ -4036,6 +4094,23 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<b>ICad</b> = gCa*sd*sd*(Vd-eCa)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>ICad</b>)
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>betahs_Vs</b> = 4.0/(1.0+exp((-20.0-Vs/MVOLT)/5.0))&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<br/>
+<span class="label">Conditional Derived Variables</span><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF Vd &lt; -10*MVOLT THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>alphacd_Vd</b> = exp((Vd/MVOLT+50.0)/11-(Vd/MVOLT+53.5)/27)/18.975&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;OTHERWISE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>alphacd_Vd</b> = 2.0*exp((-53.5-Vd/MVOLT)/27.0)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF Si &gt; Smax THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Sisat</b> = Smax&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;OTHERWISE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Sisat</b> = Si&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF 0.00002*Cad &gt; 0.01 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>alphaqd</b> = 0.01&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;OTHERWISE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>alphaqd</b> = 0.00002*Cad&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF Vd &lt; -10*MVOLT THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>betacd_Vd</b> = (2.0*exp((-53.5-Vd/MVOLT)/27.0)-alphacd_Vd)&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;OTHERWISE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>betacd_Vd</b> = 0&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;IF Cad/250 &gt; 1 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>chid</b> = 1&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;OTHERWISE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>chid</b> = Cad/250&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<br/>
 <br/>
 <span class="label">Time Derivatives</span><br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;d <b>Vd</b> /dt = (iDend/(1.0-pp)-Isyn/(1.0-pp)-gLd*(Vd-eL)-ICad-gKahp*qd*(Vd-eK)-gKC*cd*chid*(Vd-eK)+(gc*(Vs-Vd))/(1.0-pp)) / cm<br/>
