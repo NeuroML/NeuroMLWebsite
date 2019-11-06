@@ -15,7 +15,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="#">NeuroML v2beta4 Component Types</a>
+      <a class="brand" href="#">NeuroML v2beta5 Component Types</a>
       <div class="nav-collapse">
         <ul class="nav">
           <li class="active"><a href="Cells.html">Cells</a></li>
@@ -119,6 +119,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#channelDensityNernstCa2" title="This component is similar to the original component type  channelDensityNernst  but it is changed in order to have a reversal potential that depends on 2nd independent pool of Ca (ca2). See https://github.com/OpenSourceBrain/ghk-nernst. ">channelDensityNernstCa2</a><br/>
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#channelDensity" title="Specifies a time varying ohmic conductance density, gDensity, which is distributed on an area of the cell with fixed reversal potential erev producing a current density iDensity ">channelDensity</a><br/>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#channelDensityVShift" title="Same as channelDensity, but with a vShift parameter to change voltage activation of gates. The exact usage of vShift in expressions for rates is determined by the individual gates. ">channelDensityVShift</a><br/>
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#channelDensityGHK2" title="Time varying conductance density, gDensity, which is distributed on an area of the cell, producing a current density iDensity. Modified version of Jaffe et al. 1994 (used also in Lawrence et al. 2006). See https://github.com/OpenSourceBrain/ghk-nernst. ">channelDensityGHK2</a><br/>
   
@@ -225,10 +227,10 @@
     </div><!--/.well -->
     </div><!--/span-->
     <div class="span7">
-   <div class="alert alert-error">For more information on NeuroML 2 and LEMS see <a href="http://www.neuroml.org/neuromlv2">here</a>. <br/>Note: these descriptions have been updated to the latest    <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2">NeuroML v2beta4</a> definitions, using    <a href="https://github.com/LEMS/LEMS/tree/master/Schemas/LEMS">the latest version of LEMS</a>!</div>
+   <div class="alert alert-error">For more information on NeuroML 2 and LEMS see <a href="http://www.neuroml.org/neuromlv2">here</a>. <br/>Note: these descriptions have been updated to the latest    <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2">NeuroML v2beta5</a> definitions, using    <a href="https://github.com/LEMS/LEMS/tree/master/Schemas/LEMS">the latest version of LEMS</a>!</div>
     <table class="table table-bordered"><tr><td ><h3>Cells</h3></td></tr>
     <tr><td><span  style="color:dimgrey"><i>NeuroML2 ComponentType definitions from Cells.xml </i></span></td></tr>
-    <tr><td>Original LEMS ComponentType definitions: <a href="https://github.com/NeuroML/NeuroML2/blob/master/NeuroML2CoreTypes/Cells.xml">Cells.xml</a><br/>    Schema against which NeuroML based on these should be valid: <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2/NeuroML_v2beta4.xsd">NeuroML_v2beta4.xsd</a></td></tr>
+    <tr><td>Original LEMS ComponentType definitions: <a href="https://github.com/NeuroML/NeuroML2/blob/master/NeuroML2CoreTypes/Cells.xml">Cells.xml</a><br/>    Schema against which NeuroML based on these should be valid: <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2/NeuroML_v2beta5.xsd">NeuroML_v2beta5.xsd</a></td></tr>
     </table><br/>
 <a name="baseCell">&nbsp;</a>
 <table class="table table-bordered">
@@ -380,6 +382,13 @@
   </tr>
   <tr>
   <td width="70" rowspan='1'>
+    <span class="label label-info">Constants</span>
+  </td>
+    <td><b>vShift</b> = 0mV</td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#voltage">voltage</a></td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='1'>
     <span class="label label-info">Exposures</span>
   </td>
     <td style="color:darkgrey"><b>i</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Inputs.html#basePointCurrent" title="Base type for all ComponentTypes which produce a current i (with dimension current) "><span  style="color:#85ACE1;font-style:italic">basePointCurrent</span></a>)</td>
@@ -435,9 +444,12 @@
     <td colspan='2'><b>ion</b></td>
   </tr>
   <tr>
-  <td width="70" rowspan='3'>
+  <td width="70" rowspan='4'>
     <span class="label label-info">Constants</span>
   </td>
+    <td><b>vShift</b> = 0mV</td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#voltage">voltage</a></td>
+  </tr>
     <td><b>R</b> = 8.3144621 J_per_K_per_mol</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#idealGasConstantDims">idealGasConstantDims</a></td>
   </tr>
@@ -839,6 +851,13 @@
     <td colspan='2'><b>segmentGroup</b></td>
   </tr>
   <tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-info">Constants</span>
+  </td>
+    <td><b>vShift</b> = 0mV</td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#voltage">voltage</a></td>
+  </tr>
+  <tr>
   <td width="70" rowspan='2'>
     <span class="label label-info">Exposures</span>
   </td>
@@ -872,6 +891,57 @@
 <br/>
 </td>
 </tr>
+</table>
+
+<a name="channelDensityVShift">&nbsp;</a>
+<table class="table table-bordered">
+  <tr>
+    <td colspan='3'>
+       <b>channelDensityVShift</b>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#channelDensity" title="Specifies a time varying ohmic conductance density, gDensity, which is distributed on an area of the cell with fixed reversal potential erev producing a current density iDensity ">channelDensity</a></p>    </td>
+  </tr>
+  <tr>
+    <td colspan='3'>
+      <span  style="color:dimgrey"><i>Same as <a href="Cells.html#channelDensity" title="Specifies a time varying ohmic conductance density, gDensity, which is distributed on an area of the cell with fixed reversal potential erev producing a current density iDensity ">channelDensity</a>, but with a <b>vShift</b> parameter to change voltage activation of gates. The exact usage of <b>vShift</b> in expressions for rates is determined by the individual gates. </i></span>    </td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='3'>
+    <span class="label label-success">Parameters</span>
+  </td>
+    <td style="color:darkgrey"><b>condDensity</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseChannelDensityCond" title="Base type for distributed conductances on an area of a cell producing a (not necessarily ohmic) current "><span  style="color:#85ACE1;font-style:italic">baseChannelDensityCond</span></a>)</td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#conductanceDensity">conductanceDensity</a></td>
+  </tr>
+    <td style="color:darkgrey"><b>erev</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#channelDensity" title="Specifies a time varying ohmic conductance density, gDensity, which is distributed on an area of the cell with fixed reversal potential erev producing a current density iDensity ">channelDensity</a>)</td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#voltage">voltage</a></td>
+  </tr>
+    <td><b>vShift</b></td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#voltage">voltage</a></td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='2'>
+    <span class="label label-success">Text fields</span>
+  </td>
+    <td colspan='2'><b>ion</b></td>
+  </tr>
+    <td colspan='2'><b>segmentGroup</b></td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='2'>
+    <span class="label label-info">Exposures</span>
+  </td>
+    <td style="color:darkgrey"><b>gDensity</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseChannelDensityCond" title="Base type for distributed conductances on an area of a cell producing a (not necessarily ohmic) current "><span  style="color:#85ACE1;font-style:italic">baseChannelDensityCond</span></a>)</td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#conductanceDensity">conductanceDensity</a></td>
+  </tr>
+    <td style="color:darkgrey"><b>iDensity</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseChannelDensity" title="Base type for current distributed on an area of a cell "><span  style="color:#85ACE1;font-style:italic">baseChannelDensity</span></a>)</td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#currentDensity">currentDensity</a></td>
+  </tr>
+  <tr>
+  <td width="70" rowspan='1'>
+    <span class="label label-info">Requirements</span>
+  </td>
+    <td style="color:darkgrey"><b>v</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseChannelDensity" title="Base type for current distributed on an area of a cell "><span  style="color:#85ACE1;font-style:italic">baseChannelDensity</span></a>)</td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#voltage">voltage</a></td>
+  </tr>
 </table>
 
 <a name="channelDensityNernst">&nbsp;</a>
@@ -1637,9 +1707,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<b>dy</b> = distal->yLength&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 <br/>
 <span class="label">Conditional Derived Variables</span><br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;IF length = 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>surfaceArea</b> = 4 * radDist * radDist * 3.14159265&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>surfaceArea</b>)
+&nbsp;&nbsp;&nbsp;&nbsp;IF length = 0 * LEN THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>surfaceArea</b> = 4 * radDist * radDist * 3.14159265&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>surfaceArea</b>)
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;IF length &gt; 0 THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>surfaceArea</b> = 2 * radDist * 3.14159265 * length&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>surfaceArea</b>)
+&nbsp;&nbsp;&nbsp;&nbsp;IF length &gt; 0 * LEN THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>surfaceArea</b> = 2 * radDist * 3.14159265 * length&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>surfaceArea</b>)
 <br/>
 <br/>
 <br/>
@@ -2105,35 +2175,35 @@
   <td width="70" rowspan='7'>
     <span class="label label-info">Exposures</span>
   </td>
-    <td style="color:darkgrey"><b>iCa</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a>)</td>
+    <td><b>iCa</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td><b>iCa</b></td>
+    <td style="color:darkgrey"><b>iCa</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
     <td><b>iCa2</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>totChanCurrent</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a>)</td>
-    <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
-  </tr>
     <td><b>totChanCurrent</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>totSpecCap</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a>)</td>
-    <td width="100"><a href="NeuroMLCoreDimensions.html#specificCapacitance">specificCapacitance</a></td>
+    <td style="color:darkgrey"><b>totChanCurrent</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a>)</td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
     <td><b>totSpecCap</b></td>
+    <td width="100"><a href="NeuroMLCoreDimensions.html#specificCapacitance">specificCapacitance</a></td>
+  </tr>
+    <td style="color:darkgrey"><b>totSpecCap</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#specificCapacitance">specificCapacitance</a></td>
   </tr>
   <tr>
   <td width="70" rowspan='2'>
     <span class="label label-info">Requirements</span>
   </td>
-    <td><b>surfaceArea</b></td>
+    <td style="color:darkgrey"><b>surfaceArea</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#area">area</a></td>
   </tr>
-    <td style="color:darkgrey"><b>surfaceArea</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a>)</td>
+    <td><b>surfaceArea</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#area">area</a></td>
   </tr>
 <tr>
@@ -2314,10 +2384,10 @@
   <td width="70" rowspan='6'>
     <span class="label label-info">Exposures</span>
   </td>
-    <td><b>caConc</b></td>
+    <td style="color:darkgrey"><b>caConc</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td style="color:darkgrey"><b>caConc</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a>)</td>
+    <td><b>caConc</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
     <td><b>caConc2</b></td>
@@ -2589,10 +2659,10 @@
     <td style="color:darkgrey"><b>initialExtConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td style="color:darkgrey"><b>surfaceArea</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td><b>surfaceArea</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#area">area</a></td>
   </tr>
-    <td><b>surfaceArea</b></td>
+    <td style="color:darkgrey"><b>surfaceArea</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#area">area</a></td>
   </tr>
 <tr>
@@ -2798,7 +2868,7 @@
     <td width="100"><a href="Cells.html#biophysicalProperties" title="The biophysical properties of the cell, including the membraneProperties and the intracellularProperties ">biophysicalProperties</a></td>
   </tr>
   <tr>
-  <td width="70" rowspan='10'>
+  <td width="70" rowspan='9'>
     <span class="label label-info">Exposures</span>
   </td>
     <td><b>caConc</b></td>
@@ -2806,9 +2876,6 @@
   </tr>
     <td><b>caConcExt</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
-  </tr>
-    <td><b>debugVal</b></td>
-    <td width="100">Dimensionless</td>
   </tr>
     <td><b>iCa</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
@@ -2851,8 +2918,6 @@
   </td>
 <td colspan='2'>
 <span class="label">State Variables</span><br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>debugVal</b>&nbsp;&nbsp;&nbsp;&nbsp;Dimensionless (exposed as <b>debugVal</b>)
-<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>spiking</b>&nbsp;&nbsp;&nbsp;&nbsp;Dimensionless (exposed as <b>spiking</b>)
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>v</b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="NeuroMLCoreDimensions.html#voltage">voltage</a> (exposed as <b>v</b>)
@@ -2870,9 +2935,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;IF v &lt; thresh THEN<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>spiking</b> = 0<br/>
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;IF t &gt;= 0 THEN<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>debugVal</b> = debug<br/>
-<br/>
 <span class="label">Derived Variables</span><br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>totSpecCap</b> = biophysicalProperties->totSpecCap&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>totSpecCap</b>)
 <br/>
@@ -2887,10 +2949,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<b>thresh</b> = biophysicalProperties->membraneProperties->spikeThresh->value&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>caConc</b> = biophysicalProperties->intracellularProperties->caConc&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>caConc</b>)
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>debug</b> = biophysicalProperties->membraneProperties->totChanCurrent&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>surfaceArea</b> = morphology->segments[*]->surfaceArea (reduce method: add)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>surfaceArea</b>)
-<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>iChannels</b> = biophysicalProperties->membraneProperties->totChanCurrent&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>iChannels</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>surfaceArea</b> = morphology->segments[*]->surfaceArea (reduce method: add)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>surfaceArea</b>)
 <br/>
 <br/>
 <span class="label">Time Derivatives</span><br/><br/>
@@ -2925,7 +2986,7 @@
     <td width="100"><a href="Cells.html#biophysicalProperties2CaPools" title="The biophysical properties of the cell, including the membraneProperties2CaPools and the intracellularProperties2CaPools for a cell with two Ca pools ">biophysicalProperties2CaPools</a></td>
   </tr>
   <tr>
-  <td width="70" rowspan='13'>
+  <td width="70" rowspan='12'>
     <span class="label label-info">Exposures</span>
   </td>
     <td style="color:darkgrey"><b>caConc</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a>)</td>
@@ -2939,9 +3000,6 @@
   </tr>
     <td><b>caConcExt2</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
-  </tr>
-    <td style="color:darkgrey"><b>debugVal</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a>)</td>
-    <td width="100">Dimensionless</td>
   </tr>
     <td style="color:darkgrey"><b>iCa</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
@@ -2987,8 +3045,6 @@
   </td>
 <td colspan='2'>
 <span class="label">State Variables</span><br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>debugVal</b>&nbsp;&nbsp;&nbsp;&nbsp;Dimensionless (exposed as <b>debugVal</b>)
-<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>spiking</b>&nbsp;&nbsp;&nbsp;&nbsp;Dimensionless (exposed as <b>spiking</b>)
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>v</b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="NeuroMLCoreDimensions.html#voltage">voltage</a> (exposed as <b>v</b>)
@@ -3005,9 +3061,6 @@
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;IF v &lt; thresh THEN<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>spiking</b> = 0<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;IF t &gt;= 0 THEN<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>debugVal</b> = debug<br/>
 <br/>
 <span class="label">Derived Variables</span><br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>totSpecCap</b> = biophysicalProperties2CaPools->totSpecCap&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>totSpecCap</b>)
@@ -3029,10 +3082,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<b>thresh</b> = biophysicalProperties2CaPools->membraneProperties2CaPools->spikeThresh->value&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>caConc</b> = biophysicalProperties2CaPools->intracellularProperties2CaPools->caConc&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>caConc</b>)
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>debug</b> = biophysicalProperties2CaPools->membraneProperties2CaPools->totChanCurrent&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>surfaceArea</b> = morphology->segments[*]->surfaceArea (reduce method: add)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>surfaceArea</b>)
-<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>iChannels</b> = biophysicalProperties2CaPools->membraneProperties2CaPools->totChanCurrent&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>iChannels</b>)
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>surfaceArea</b> = morphology->segments[*]->surfaceArea (reduce method: add)&nbsp;&nbsp;&nbsp;&nbsp; (exposed as <b>surfaceArea</b>)
 <br/>
 <br/>
 <span class="label">Time Derivatives</span><br/><br/>
