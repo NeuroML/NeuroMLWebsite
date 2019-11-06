@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem "rails", "3.2.13"
-gem "jquery-rails", "~> 2.0.2"
+gem "rails", "3.2.17"
+gem "jquery-rails", "~> 3.1.3"
 gem "i18n", "~> 0.6.0"
 gem "coderay", "~> 1.0.6"
 gem "fastercsv", "~> 1.5.0", :platforms => [:mri_18, :mingw_18, :jruby]
@@ -9,12 +9,12 @@ gem "builder", "3.0.0"
 gem "twitter", "4.8.1"
 # Optional gem for LDAP authentication
 group :ldap do
-  gem "net-ldap", "~> 0.3.1"
+  gem "net-ldap", "~> 0.16.1"
 end
 
 # Optional gem for OpenID authentication
 group :openid do
-  gem "ruby-openid", "~> 2.1.4", :require => "openid"
+  gem "ruby-openid", "~> 2.2.2", :require => "openid"
   gem "rack-openid"
 end
 
