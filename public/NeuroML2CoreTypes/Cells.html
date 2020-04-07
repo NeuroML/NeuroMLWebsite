@@ -15,7 +15,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="#">NeuroML v2beta5 Component Types</a>
+      <a class="brand" href="#">NeuroML v2.0 Component Types</a>
       <div class="nav-collapse">
         <ul class="nav">
           <li class="active"><a href="Cells.html">Cells</a></li>
@@ -42,23 +42,23 @@
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#baseCellMembPotDL" title="Any spiking cell which has a dimensioness membrane potential, V. "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotDL</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#fitzHughNagumoCell" title="Simple dimensionless model of spiking cell from FitzHugh and Nagumo. Based on http://www.scholarpedia.org/article/FitzHugh-Nagumo_model. Note: should be updated, see https://github.com/NeuroML/NeuroML2/issues/42 ">fitzHughNagumoCell</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#fitzHughNagumoCell" title="Simple dimensionless model of spiking cell from FitzHugh and Nagumo. Superseded by fitzHughNagumo1969Cell (See https://github.com/NeuroML/NeuroML2/issues/42) ">fitzHughNagumoCell</a><br/>
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#fitzHughNagumo1969Cell" title="The Fitzhugh Nagumo model is a two-dimensional simplification of the Hodgkin-Huxley model of spike generation in squid giant axons.  This system was suggested by FitzHugh (FitzHugh R. [1961]: Impulses and physiological states in theoretical models of nerve membrane.  Biophysical J.  1:445-466), who called it " Bonhoeffer-van der Pol model ", and the equivalent circuit by Nagumo et al.  (Nagumo J., Arimoto S., and Yoshizawa S. [1962] An active pulse transmission line simulating nerve axon. Proc IRE. 50:2061-2070.1962). This version corresponds to the one described in FitzHugh R.[1969]: Mathematical models of excitation and propagation in nerve.  Chapter 1 (pp. 1-85 in H.P. Schwan, ed. Biological Engineering, McGraw-Hill Book Co., N.Y.) ">fitzHughNagumo1969Cell</a><br/>
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#baseCellMembPot" title="Any spiking cell which has a membrane potential v with voltage units. "><span  style="color:#85ACE1;font-style:italic">baseCellMembPot</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a><br/>
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#pointCellCondBasedCa" title="TEMPORARY: Point cell with conductances and Ca concentration  info. Not yet fully tested!!! ">pointCellCondBasedCa</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>concentrationModels <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>concentrationModels <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#decayingPoolConcentrationModel" title="Model of buffering of concentration of an ion (currently hard coded to be calcium, due to requirement for iCa) which has a baseline level restingConc and tends to this value with time course decayConstant. The ion is assumed to occupy a shell inside the membrane of thickness shellThickness. ">decayingPoolConcentrationModel</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#decayingPoolConcentrationModel" title="Model of an intracellular buffering mechanism for ion (currently hard Coded to be calcium, due to requirement for iCa) which has a baseline level restingConc and tends to this value with time course decayConstant. The ion is assumed to occupy a shell inside the membrane of thickness shellThickness. ">decayingPoolConcentrationModel</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#fixedFactorConcentrationModelTraub" title="Model of buffering of concentration of an ion (currently hard coded to be calcium, due to requirement for iCa) which has a baseline level restingConc and tends to this value with time course 1 / beta. A fixed factor phi is used to scale the incoming current INDEPENDENTLY OF THE SIZE OF THE COMPARTMENT to produce a concentration change. Not recommended for use in models other than Traub et al. 2005! ">fixedFactorConcentrationModelTraub</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#fixedFactorConcentrationModelTraub" title="Model of buffering of concentration of an ion (currently hard coded to be calcium, due to requirement for iCa) which has a baseline level restingConc and tends to this value with time course 1 / beta. A fixed factor phi is used to scale the incoming current *independently of the size of the compartment* to produce a concentration change. Not recommended for use in models other than Traub et al. 2005! ">fixedFactorConcentrationModelTraub</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#fixedFactorConcentrationModel" title="Model of buffering of concentration of an ion (currently hard coded to be calcium, due to requirement for iCa) which has a baseline level restingConc and tends to this value with time course decayConstant. A fixed factor rho is used to scale the incoming current INDEPENDENTLY OF THE SIZE OF THE COMPARTMENT to produce a concentration change. ">fixedFactorConcentrationModel</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#fixedFactorConcentrationModel" title="Model of buffering of concentration of an ion (currently hard coded to be calcium, due to requirement for iCa) which has a baseline level restingConc and tends to this value with time course decayConstant. A fixed factor rho is used to scale the incoming current *independently of the size of the compartment* to produce a concentration change. ">fixedFactorConcentrationModel</a><br/>
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>populations <a href="Cells.html#baseChannelPopulation" title="Base type for any current produced by a population of channels, all of type ionChannel "><span  style="color:#85ACE1;font-style:italic">baseChannelPopulation</span></a><br/>
   
@@ -80,9 +80,9 @@
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#izhikevich2007Cell" title="Cell based on the modified Izhikevich model in Izhikevich 2007, Dynamical systems in neuroscience, MIT Press ">izhikevich2007Cell</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment. ">cell</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#cell2CaPools" title="Variant of cell with 2 independnet Ca pools. Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell2CaPools</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#cell2CaPools" title="Variant of cell with two independent Ca2+ pools. Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment. ">cell2CaPools</a><br/>
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span><a href="Cells.html#biophysicalProperties2CaPools" title="The biophysical properties of the cell, including the membraneProperties2CaPools and the intracellularProperties2CaPools for a cell with two Ca pools ">biophysicalProperties2CaPools</a><br/>
   
@@ -116,7 +116,7 @@
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#channelDensityNernst" title="Specifies a time varying conductance density, gDensity, which is distributed on an area of the cell, producing a current density iDensity and whose reversal potential is calculated from the Nernst equation. Hard coded for Ca only! See https://github.com/OpenSourceBrain/ghk-nernst. ">channelDensityNernst</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#channelDensityNernstCa2" title="This component is similar to the original component type  channelDensityNernst  but it is changed in order to have a reversal potential that depends on 2nd independent pool of Ca (ca2). See https://github.com/OpenSourceBrain/ghk-nernst. ">channelDensityNernstCa2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#channelDensityNernstCa2" title="This component is similar to the original component type  channelDensityNernst  but it is changed in order to have a reversal potential that depends on a second independent Ca++ pool (ca2). See https://github.com/OpenSourceBrain/ghk-nernst. ">channelDensityNernstCa2</a><br/>
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#channelDensity" title="Specifies a time varying ohmic conductance density, gDensity, which is distributed on an area of the cell with fixed reversal potential erev producing a current density iDensity ">channelDensity</a><br/>
   
@@ -202,7 +202,7 @@
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span><a href="Cells.html#biophysicalProperties" title="The biophysical properties of the cell, including the membraneProperties and the intracellularProperties ">biophysicalProperties</a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span><a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>+</b> </span><a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of ionic species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a><br/>
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>++</b> </span>speciesList <a href="Cells.html#species" title="Description of a chemical species identified by ion, which has internal, concentration, and external, extConcentration values for its concentration ">species</a><br/>
   
@@ -216,7 +216,7 @@
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#baseIaf" title="Base ComponentType for an integrate and fire cell which emits a spiking event at membrane potential thresh and and resets to reset "><span  style="color:#85ACE1;font-style:italic">baseIaf</span></a><br/>
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#iafTauCell" title="Integrate and fire cell which returns to its leak reversal potential of leakReversal with a time course tau ">iafTauCell</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#iafTauCell" title="Integrate and fire cell which returns to its leak reversal potential of leakReversal with a time constant tau ">iafTauCell</a><br/>
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style="color:darkgrey"><b>></b> </span><a href="Cells.html#iafTauRefCell" title="Integrate and fire cell which returns to its leak reversal potential of leakReversal with a time course tau. It has a refractory period of refract after spiking ">iafTauRefCell</a><br/>
   
@@ -227,10 +227,10 @@
     </div><!--/.well -->
     </div><!--/span-->
     <div class="span7">
-   <div class="alert alert-error">For more information on NeuroML 2 and LEMS see <a href="http://www.neuroml.org/neuromlv2">here</a>. <br/>Note: these descriptions have been updated to the latest    <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2">NeuroML v2beta5</a> definitions, using    <a href="https://github.com/LEMS/LEMS/tree/master/Schemas/LEMS">the latest version of LEMS</a>!</div>
+   <div class="alert alert-error">For more information on NeuroML 2 and LEMS see <a href="http://www.neuroml.org/neuromlv2">here</a>. <br/>Note: these descriptions have been updated to the latest    <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2">NeuroML v2.0</a> definitions, using    <a href="https://github.com/LEMS/LEMS/tree/master/Schemas/LEMS">the latest version of LEMS</a>!</div>
     <table class="table table-bordered"><tr><td ><h3>Cells</h3></td></tr>
     <tr><td><span  style="color:dimgrey"><i>NeuroML2 ComponentType definitions from Cells.xml </i></span></td></tr>
-    <tr><td>Original LEMS ComponentType definitions: <a href="https://github.com/NeuroML/NeuroML2/blob/master/NeuroML2CoreTypes/Cells.xml">Cells.xml</a><br/>    Schema against which NeuroML based on these should be valid: <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2/NeuroML_v2beta5.xsd">NeuroML_v2beta5.xsd</a></td></tr>
+    <tr><td>Original LEMS ComponentType definitions: <a href="https://github.com/NeuroML/NeuroML2/blob/master/NeuroML2CoreTypes/Cells.xml">Cells.xml</a><br/>    Schema against which NeuroML based on these should be valid: <a href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2/NeuroML_v2.0.xsd">NeuroML_v2.0.xsd</a></td></tr>
     </table><br/>
 <a name="baseCell">&nbsp;</a>
 <table class="table table-bordered">
@@ -1053,7 +1053,7 @@
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>This component is similar to the original component type <b></b> channelDensityNernst <b></b> but it is changed in order to have a reversal potential that depends on 2nd independent pool of Ca (ca2). See https://github.com/OpenSourceBrain/ghk-nernst. </i></span>    </td>
+      <span  style="color:dimgrey"><i>This component is similar to the original component type <b></b> channelDensityNernst <b></b> but it is changed in order to have a reversal potential that depends on a second independent Ca++ pool (ca2). See https://github.com/OpenSourceBrain/ghk-nernst. </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='1'>
@@ -1332,7 +1332,7 @@
   <tr>
     <td colspan='3'>
        <b>pointCellCondBased</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
@@ -1342,7 +1342,7 @@
   <td width="70" rowspan='3'>
     <span class="label label-success">Parameters</span>
   </td>
-    <td style="color:darkgrey"><b>C</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>C</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#capacitance">capacitance</a></td>
   </tr>
     <td><b>thresh</b></td>
@@ -1362,10 +1362,10 @@
   <td width="70" rowspan='3'>
     <span class="label label-info">Exposures</span>
   </td>
-    <td style="color:darkgrey"><b>iMemb</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>iMemb</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
     <td style="color:darkgrey"><b>v</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPot" title="Any spiking cell which has a membrane potential v with voltage units. "><span  style="color:#85ACE1;font-style:italic">baseCellMembPot</span></a>)</td>
@@ -1426,7 +1426,7 @@
   <tr>
     <td colspan='3'>
        <b>pointCellCondBasedCa</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
@@ -1436,7 +1436,7 @@
   <td width="70" rowspan='3'>
     <span class="label label-success">Parameters</span>
   </td>
-    <td style="color:darkgrey"><b>C</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>C</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#capacitance">capacitance</a></td>
   </tr>
     <td><b>thresh</b></td>
@@ -1450,7 +1450,7 @@
     <span class="label label-success">Children elements</span>
   </td>
     <td><b>concentrationModels</b></td>
-    <td width="100"><a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a></td>
+    <td width="100"><a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a></td>
   </tr>
     <td><b>populations</b></td>
     <td width="100"><a href="Cells.html#baseChannelPopulation" title="Base type for any current produced by a population of channels, all of type ionChannel "><span  style="color:#85ACE1;font-style:italic">baseChannelPopulation</span></a></td>
@@ -1465,10 +1465,10 @@
     <td><b>iCa</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>iMemb</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>iMemb</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
     <td style="color:darkgrey"><b>v</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPot" title="Any spiking cell which has a membrane potential v with voltage units. "><span  style="color:#85ACE1;font-style:italic">baseCellMembPot</span></a>)</td>
@@ -2184,10 +2184,10 @@
     <td><b>iCa2</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td><b>totChanCurrent</b></td>
+    <td style="color:darkgrey"><b>totChanCurrent</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>totChanCurrent</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a>)</td>
+    <td><b>totChanCurrent</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
     <td><b>totSpecCap</b></td>
@@ -2240,14 +2240,14 @@
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>The biophysical properties of the <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a>, including the <a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a> and the <a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a> </i></span>    </td>
+      <span  style="color:dimgrey"><i>The biophysical properties of the <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment. ">cell</a>, including the <a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a> and the <a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of ionic species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a> </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='2'>
     <span class="label label-success">Child elements</span>
   </td>
     <td><b>intracellularProperties</b></td>
-    <td width="100"><a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a></td>
+    <td width="100"><a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of ionic species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a></td>
   </tr>
     <td><b>membraneProperties</b></td>
     <td width="100"><a href="Cells.html#membraneProperties" title="Properties specific to the membrane, such as the populations of channels, channelDensities, specificCapacitance, etc. ">membraneProperties</a></td>
@@ -2281,7 +2281,7 @@
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>The biophysical properties of the <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a>, including the <a href="Cells.html#membraneProperties2CaPools" title="Variant of membraneProperties with 2 independent Ca pools ">membraneProperties2CaPools</a> and the <a href="Cells.html#intracellularProperties2CaPools" title="Variant of intracellularProperties with 2 independent Ca pools ">intracellularProperties2CaPools</a> for a cell with two Ca pools </i></span>    </td>
+      <span  style="color:dimgrey"><i>The biophysical properties of the <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment. ">cell</a>, including the <a href="Cells.html#membraneProperties2CaPools" title="Variant of membraneProperties with 2 independent Ca pools ">membraneProperties2CaPools</a> and the <a href="Cells.html#intracellularProperties2CaPools" title="Variant of intracellularProperties with 2 independent Ca pools ">intracellularProperties2CaPools</a> for a cell with two Ca pools </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='2'>
@@ -2322,7 +2322,7 @@
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>Biophysical properties related to the intracellular space within the <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a>, such as the <a href="Cells.html#resistivity" title="The resistivity, or specific axial resistance, of the cytoplasm ">resistivity</a> and the list of <a href="Cells.html#species" title="Description of a chemical species identified by ion, which has internal, concentration, and external, extConcentration values for its concentration ">species</a> present. <b>caConc</b> and <b>caConcExt</b> are explicitly exposed here to facilitate accessing these values from other Components, even though <b>caConcExt</b> is clearly not an intracellular property </i></span>    </td>
+      <span  style="color:dimgrey"><i>Biophysical properties related to the intracellular space within the <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment. ">cell</a>, such as the <a href="Cells.html#resistivity" title="The resistivity, or specific axial resistance, of the cytoplasm ">resistivity</a> and the list of ionic <a href="Cells.html#species" title="Description of a chemical species identified by ion, which has internal, concentration, and external, extConcentration values for its concentration ">species</a> present. <b>caConc</b> and <b>caConcExt</b> are explicitly exposed here to facilitate accessing these values from other Components, even though <b>caConcExt</b> is clearly not an intracellular property </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='2'>
@@ -2364,7 +2364,7 @@
   <tr>
     <td colspan='3'>
        <b>intracellularProperties2CaPools</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of ionic species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
@@ -2384,7 +2384,7 @@
   <td width="70" rowspan='6'>
     <span class="label label-info">Exposures</span>
   </td>
-    <td style="color:darkgrey"><b>caConc</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a>)</td>
+    <td style="color:darkgrey"><b>caConc</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of ionic species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
     <td><b>caConc</b></td>
@@ -2396,7 +2396,7 @@
     <td><b>caConcExt</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td style="color:darkgrey"><b>caConcExt</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a>)</td>
+    <td style="color:darkgrey"><b>caConcExt</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#intracellularProperties" title="Biophysical properties related to the intracellular space within the cell, such as the resistivity and the list of ionic species present. caConc and caConcExt are explicitly exposed here to facilitate accessing these values from other Components, even though caConcExt is clearly not an intracellular property ">intracellularProperties</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
     <td><b>caConcExt2</b></td>
@@ -2456,7 +2456,7 @@
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>Base for any model of an <b>ion</b> concentration which changes with time. Internal, <b>concentration,</b> and external, <b>extConcentration,</b> values for the concentration of the ion are given. </i></span>    </td>
+      <span  style="color:dimgrey"><i>Base for any model of an <b>ion</b> concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='1'>
@@ -2511,11 +2511,11 @@
   <tr>
     <td colspan='3'>
        <b>decayingPoolConcentrationModel</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>Model of buffering of concentration of an <b>ion</b> (currently hard coded to be calcium, due to requirement for <b>iCa)</b> which has a baseline level <b>restingConc</b> and tends to this value with time course <b>decayConstant.</b> The ion is assumed to occupy a shell inside the membrane of thickness <b>shellThickness.</b> </i></span>    </td>
+      <span  style="color:dimgrey"><i>Model of an intracellular buffering mechanism for <b>ion</b> (currently hard Coded to be calcium, due to requirement for <b>iCa)</b> which has a baseline level <b>restingConc</b> and tends to this value with time course <b>decayConstant.</b> The ion is assumed to occupy a shell inside the membrane of thickness <b>shellThickness.</b> </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='3'>
@@ -2553,10 +2553,10 @@
   <td width="70" rowspan='2'>
     <span class="label label-info">Exposures</span>
   </td>
-    <td style="color:darkgrey"><b>concentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>concentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td style="color:darkgrey"><b>extConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>extConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
   <tr>
@@ -2566,13 +2566,13 @@
     <td><b>iCa</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>initialConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>initialConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td style="color:darkgrey"><b>initialExtConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>initialExtConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td style="color:darkgrey"><b>surfaceArea</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>surfaceArea</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#area">area</a></td>
   </tr>
 <tr>
@@ -2611,11 +2611,11 @@
   <tr>
     <td colspan='3'>
        <b>fixedFactorConcentrationModel</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>Model of buffering of concentration of an ion (currently hard coded to be calcium, due to requirement for <b>iCa)</b> which has a baseline level <b>restingConc</b> and tends to this value with time course <b>decayConstant.</b> A fixed factor <b>rho</b> is used to scale the incoming current INDEPENDENTLY OF THE SIZE OF THE COMPARTMENT to produce a concentration change. </i></span>    </td>
+      <span  style="color:dimgrey"><i>Model of buffering of concentration of an ion (currently hard coded to be calcium, due to requirement for <b>iCa)</b> which has a baseline level <b>restingConc</b> and tends to this value with time course <b>decayConstant.</b> A fixed factor <b>rho</b> is used to scale the incoming current <u>independently of the size of the compartment</u> to produce a concentration change. </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='3'>
@@ -2640,10 +2640,10 @@
   <td width="70" rowspan='2'>
     <span class="label label-info">Exposures</span>
   </td>
-    <td style="color:darkgrey"><b>concentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>concentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td style="color:darkgrey"><b>extConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>extConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
   <tr>
@@ -2653,16 +2653,16 @@
     <td><b>iCa</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>initialConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>initialConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td style="color:darkgrey"><b>initialExtConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>initialExtConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
     <td><b>surfaceArea</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#area">area</a></td>
   </tr>
-    <td style="color:darkgrey"><b>surfaceArea</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>surfaceArea</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#area">area</a></td>
   </tr>
 <tr>
@@ -2696,11 +2696,11 @@
   <tr>
     <td colspan='3'>
        <b>fixedFactorConcentrationModelTraub</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>Model of buffering of concentration of an ion (currently hard coded to be calcium, due to requirement for <b>iCa)</b> which has a baseline level <b>restingConc</b> and tends to this value with time course 1 / <b>beta.</b> A fixed factor <b>phi</b> is used to scale the incoming current INDEPENDENTLY OF THE SIZE OF THE COMPARTMENT to produce a concentration change. Not recommended for use in models other than Traub et al. 2005! </i></span>    </td>
+      <span  style="color:dimgrey"><i>Model of buffering of concentration of an ion (currently hard coded to be calcium, due to requirement for <b>iCa)</b> which has a baseline level <b>restingConc</b> and tends to this value with time course 1 / <b>beta.</b> A fixed factor <b>phi</b> is used to scale the incoming current <u>independently of the size of the compartment</u> to produce a concentration change. Not recommended for use in models other than Traub et al. 2005! </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='3'>
@@ -2725,10 +2725,10 @@
   <td width="70" rowspan='2'>
     <span class="label label-info">Exposures</span>
   </td>
-    <td style="color:darkgrey"><b>concentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>concentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td style="color:darkgrey"><b>extConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>extConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
   <tr>
@@ -2738,16 +2738,16 @@
     <td><b>iCa</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>initialConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>initialConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td style="color:darkgrey"><b>initialExtConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>initialExtConcentration</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
     <td><b>surfaceArea</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#area">area</a></td>
   </tr>
-    <td style="color:darkgrey"><b>surfaceArea</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a>)</td>
+    <td style="color:darkgrey"><b>surfaceArea</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#area">area</a></td>
   </tr>
 <tr>
@@ -2810,7 +2810,7 @@
     <span class="label label-success">Component References</span>
   </td>
     <td><b>concentrationModel</b></td>
-    <td width="100"><a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal, concentration, and external, extConcentration, values for the concentration of the ion are given. ">concentrationModel</a></td>
+    <td width="100"><a href="Cells.html#concentrationModel" title="Base for any model of an ion concentration which changes with time. Internal (_concentration) and external (_extConcentration) values for the concentration of the ion are given. ">concentrationModel</a></td>
   </tr>
   <tr>
   <td width="70" rowspan='2'>
@@ -2849,7 +2849,7 @@
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>Cell with <a href="Cells.html#segment" title="A segment defines the smallest unit within a possibly branching structure (morphology), such as a dendrite or axon. The shape is given by the proximal and distal points. If proximal is missing, the proximal point is assumed to be the distal point of the parent. parent specifies the parent segment. The first segment (no parent) usually represents the soma. NOTE: LEMS does not yet support multicompartmental modelling, so the Dynamics here is only appropriate for single compartment modelling.  ">segment</a>s specified in a <a href="Cells.html#morphology" title="The collection of segments which specify the 3D structure of the cell, along with a number of segmentGroups ">morphology</a> element along with details on its <a href="Cells.html#biophysicalProperties" title="The biophysical properties of the cell, including the membraneProperties and the intracellularProperties ">biophysicalProperties</a>. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and <b>v</b> of this cell represents the membrane potential in that isopotential segment!!! </i></span>    </td>
+      <span  style="color:dimgrey"><i>Cell with <a href="Cells.html#segment" title="A segment defines the smallest unit within a possibly branching structure (morphology), such as a dendrite or axon. The shape is given by the proximal and distal points. If proximal is missing, the proximal point is assumed to be the distal point of the parent. parent specifies the parent segment. The first segment (no parent) usually represents the soma. NOTE: LEMS does not yet support multicompartmental modelling, so the Dynamics here is only appropriate for single compartment modelling.  ">segment</a>s specified in a <a href="Cells.html#morphology" title="The collection of segments which specify the 3D structure of the cell, along with a number of segmentGroups ">morphology</a> element along with details on its <a href="Cells.html#biophysicalProperties" title="The biophysical properties of the cell, including the membraneProperties and the intracellularProperties ">biophysicalProperties</a>. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and <b>v</b> of this cell represents the membrane potential in that isopotential segment. </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='1'>
@@ -2966,11 +2966,11 @@
   <tr>
     <td colspan='3'>
        <b>cell2CaPools</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment. ">cell</a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>Variant of cell with 2 independnet Ca pools. Cell with <a href="Cells.html#segment" title="A segment defines the smallest unit within a possibly branching structure (morphology), such as a dendrite or axon. The shape is given by the proximal and distal points. If proximal is missing, the proximal point is assumed to be the distal point of the parent. parent specifies the parent segment. The first segment (no parent) usually represents the soma. NOTE: LEMS does not yet support multicompartmental modelling, so the Dynamics here is only appropriate for single compartment modelling.  ">segment</a>s specified in a <a href="Cells.html#morphology" title="The collection of segments which specify the 3D structure of the cell, along with a number of segmentGroups ">morphology</a> element along with details on its <a href="Cells.html#biophysicalProperties" title="The biophysical properties of the cell, including the membraneProperties and the intracellularProperties ">biophysicalProperties</a>. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and <b>v</b> of this cell represents the membrane potential in that isopotential segment!!! </i></span>    </td>
+      <span  style="color:dimgrey"><i>Variant of cell with two independent Ca2+ pools. Cell with <a href="Cells.html#segment" title="A segment defines the smallest unit within a possibly branching structure (morphology), such as a dendrite or axon. The shape is given by the proximal and distal points. If proximal is missing, the proximal point is assumed to be the distal point of the parent. parent specifies the parent segment. The first segment (no parent) usually represents the soma. NOTE: LEMS does not yet support multicompartmental modelling, so the Dynamics here is only appropriate for single compartment modelling.  ">segment</a>s specified in a <a href="Cells.html#morphology" title="The collection of segments which specify the 3D structure of the cell, along with a number of segmentGroups ">morphology</a> element along with details on its <a href="Cells.html#biophysicalProperties" title="The biophysical properties of the cell, including the membraneProperties and the intracellularProperties ">biophysicalProperties</a>. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and <b>v</b> of this cell represents the membrane potential in that isopotential segment. </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='1'>
@@ -2989,37 +2989,37 @@
   <td width="70" rowspan='12'>
     <span class="label label-info">Exposures</span>
   </td>
-    <td style="color:darkgrey"><b>caConc</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a>)</td>
+    <td style="color:darkgrey"><b>caConc</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment. ">cell</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
     <td><b>caConc2</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td style="color:darkgrey"><b>caConcExt</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a>)</td>
+    <td style="color:darkgrey"><b>caConcExt</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment. ">cell</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
     <td><b>caConcExt2</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#concentration">concentration</a></td>
   </tr>
-    <td style="color:darkgrey"><b>iCa</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a>)</td>
+    <td style="color:darkgrey"><b>iCa</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment. ">cell</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
     <td><b>iCa2</b></td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>iChannels</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a>)</td>
+    <td style="color:darkgrey"><b>iChannels</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment. ">cell</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a>)</td>
+    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment. ">cell</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>spiking</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a>)</td>
+    <td style="color:darkgrey"><b>spiking</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment. ">cell</a>)</td>
     <td width="100">Dimensionless</td>
   </tr>
-    <td style="color:darkgrey"><b>surfaceArea</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a>)</td>
+    <td style="color:darkgrey"><b>surfaceArea</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment. ">cell</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#area">area</a></td>
   </tr>
-    <td style="color:darkgrey"><b>totSpecCap</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using LEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment!!! ">cell</a>)</td>
+    <td style="color:darkgrey"><b>totSpecCap</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#cell" title="Cell with segments specified in a morphology element along with details on its biophysicalProperties. NOTE: this can only be correctly simulated using jLEMS when there is a single segment in the cell, and v of this cell represents the membrane potential in that isopotential segment. ">cell</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#specificCapacitance">specificCapacitance</a></td>
   </tr>
     <td style="color:darkgrey"><b>v</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPot" title="Any spiking cell which has a membrane potential v with voltage units. "><span  style="color:#85ACE1;font-style:italic">baseCellMembPot</span></a>)</td>
@@ -3103,7 +3103,7 @@
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>Any cell with a membrane potential <b>v</b> with voltage units and a membrane capacitance <b>C.</b> Also defines exposed value <b>iSyn</b> for current due to external synapses and <b>iMemb</b> for total current crossing membrane (normally channel currents plus <b>iSyn)</b> </i></span>    </td>
+      <span  style="color:dimgrey"><i>Any cell with a membrane potential <b>v</b> with voltage units and a membrane capacitance <b>C.</b> Also defines exposed value <b>iSyn</b> for current due to external synapses and <b>iMemb</b> for total transmembrane current (usually channel currents plus <b>iSyn)</b> </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='1'>
@@ -3180,7 +3180,7 @@
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>Integrate and fire cell which returns to its leak reversal potential of <b>leakReversal</b> with a time course <b>tau</b> </i></span>    </td>
+      <span  style="color:dimgrey"><i>Integrate and fire cell which returns to its leak reversal potential of <b>leakReversal</b> with a time constant <b>tau</b> </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='4'>
@@ -3241,7 +3241,7 @@
   <tr>
     <td colspan='3'>
        <b>iafTauRefCell</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#iafTauCell" title="Integrate and fire cell which returns to its leak reversal potential of leakReversal with a time course tau ">iafTauCell</a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#iafTauCell" title="Integrate and fire cell which returns to its leak reversal potential of leakReversal with a time constant tau ">iafTauCell</a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
@@ -3251,7 +3251,7 @@
   <td width="70" rowspan='5'>
     <span class="label label-success">Parameters</span>
   </td>
-    <td style="color:darkgrey"><b>leakReversal</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#iafTauCell" title="Integrate and fire cell which returns to its leak reversal potential of leakReversal with a time course tau ">iafTauCell</a>)</td>
+    <td style="color:darkgrey"><b>leakReversal</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#iafTauCell" title="Integrate and fire cell which returns to its leak reversal potential of leakReversal with a time constant tau ">iafTauCell</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#voltage">voltage</a></td>
   </tr>
     <td><b>refract</b></td>
@@ -3260,7 +3260,7 @@
     <td style="color:darkgrey"><b>reset</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseIaf" title="Base ComponentType for an integrate and fire cell which emits a spiking event at membrane potential thresh and and resets to reset "><span  style="color:#85ACE1;font-style:italic">baseIaf</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#voltage">voltage</a></td>
   </tr>
-    <td style="color:darkgrey"><b>tau</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#iafTauCell" title="Integrate and fire cell which returns to its leak reversal potential of leakReversal with a time course tau ">iafTauCell</a>)</td>
+    <td style="color:darkgrey"><b>tau</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#iafTauCell" title="Integrate and fire cell which returns to its leak reversal potential of leakReversal with a time constant tau ">iafTauCell</a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#time">time</a></td>
   </tr>
     <td style="color:darkgrey"><b>thresh</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseIaf" title="Base ComponentType for an integrate and fire cell which emits a spiking event at membrane potential thresh and and resets to reset "><span  style="color:#85ACE1;font-style:italic">baseIaf</span></a>)</td>
@@ -3321,7 +3321,7 @@
   <tr>
     <td colspan='3'>
        <b><span  style="color:dimgrey;font-style:italic">baseIafCapCell</span></b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
@@ -3331,7 +3331,7 @@
   <td width="70" rowspan='3'>
     <span class="label label-success">Parameters</span>
   </td>
-    <td style="color:darkgrey"><b>C</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>C</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#capacitance">capacitance</a></td>
   </tr>
     <td><b>reset</b></td>
@@ -3344,10 +3344,10 @@
   <td width="70" rowspan='3'>
     <span class="label label-info">Exposures</span>
   </td>
-    <td style="color:darkgrey"><b>iMemb</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>iMemb</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
     <td style="color:darkgrey"><b>v</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPot" title="Any spiking cell which has a membrane potential v with voltage units. "><span  style="color:#85ACE1;font-style:italic">baseCellMembPot</span></a>)</td>
@@ -3377,7 +3377,7 @@
   <td width="70" rowspan='5'>
     <span class="label label-success">Parameters</span>
   </td>
-    <td style="color:darkgrey"><b>C</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>C</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#capacitance">capacitance</a></td>
   </tr>
     <td><b>leakConductance</b></td>
@@ -3396,10 +3396,10 @@
   <td width="70" rowspan='3'>
     <span class="label label-info">Exposures</span>
   </td>
-    <td style="color:darkgrey"><b>iMemb</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>iMemb</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
     <td style="color:darkgrey"><b>v</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPot" title="Any spiking cell which has a membrane potential v with voltage units. "><span  style="color:#85ACE1;font-style:italic">baseCellMembPot</span></a>)</td>
@@ -3464,7 +3464,7 @@
   <td width="70" rowspan='6'>
     <span class="label label-success">Parameters</span>
   </td>
-    <td style="color:darkgrey"><b>C</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>C</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#capacitance">capacitance</a></td>
   </tr>
     <td style="color:darkgrey"><b>leakConductance</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#iafCell" title="Integrate and fire cell with capacitance C, leakConductance and leakReversal ">iafCell</a>)</td>
@@ -3486,10 +3486,10 @@
   <td width="70" rowspan='3'>
     <span class="label label-info">Exposures</span>
   </td>
-    <td style="color:darkgrey"><b>iMemb</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>iMemb</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
     <td style="color:darkgrey"><b>v</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPot" title="Any spiking cell which has a membrane potential v with voltage units. "><span  style="color:#85ACE1;font-style:italic">baseCellMembPot</span></a>)</td>
@@ -3655,7 +3655,7 @@
   <tr>
     <td colspan='3'>
        <b>izhikevich2007Cell</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
@@ -3665,7 +3665,7 @@
   <td width="70" rowspan='10'>
     <span class="label label-success">Parameters</span>
   </td>
-    <td style="color:darkgrey"><b>C</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>C</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#capacitance">capacitance</a></td>
   </tr>
     <td><b>a</b></td>
@@ -3699,10 +3699,10 @@
   <td width="70" rowspan='4'>
     <span class="label label-info">Exposures</span>
   </td>
-    <td style="color:darkgrey"><b>iMemb</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>iMemb</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
     <td><b>u</b></td>
@@ -3765,7 +3765,7 @@
   <tr>
     <td colspan='3'>
        <b>adExIaFCell</b>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a></p>    </td>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;extends <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a></p>    </td>
   </tr>
   <tr>
     <td colspan='3'>
@@ -3775,7 +3775,7 @@
   <td width="70" rowspan='11'>
     <span class="label label-success">Parameters</span>
   </td>
-    <td style="color:darkgrey"><b>C</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>C</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#capacitance">capacitance</a></td>
   </tr>
     <td><b>EL</b></td>
@@ -3812,10 +3812,10 @@
   <td width="70" rowspan='4'>
     <span class="label label-info">Exposures</span>
   </td>
-    <td style="color:darkgrey"><b>iMemb</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>iMemb</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
-    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total current crossing membrane (normally channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
+    <td style="color:darkgrey"><b>iSyn</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPotCap" title="Any cell with a membrane potential v with voltage units and a membrane capacitance C. Also defines exposed value iSyn for current due to external synapses and iMemb for total transmembrane current (usually channel currents plus iSyn) "><span  style="color:#85ACE1;font-style:italic">baseCellMembPotCap</span></a>)</td>
     <td width="100"><a href="NeuroMLCoreDimensions.html#current">current</a></td>
   </tr>
     <td style="color:darkgrey"><b>v</b>&nbsp;&nbsp;&nbsp;&nbsp;(from <a href="Cells.html#baseCellMembPot" title="Any spiking cell which has a membrane potential v with voltage units. "><span  style="color:#85ACE1;font-style:italic">baseCellMembPot</span></a>)</td>
@@ -3897,7 +3897,7 @@
   </tr>
   <tr>
     <td colspan='3'>
-      <span  style="color:dimgrey"><i>Simple dimensionless model of spiking cell from FitzHugh and Nagumo. Based on <a href="http://www.scholarpedia.org/article/FitzHugh-Nagumo_model.">http://www.scholarpedia.org/article/FitzHugh-Nagumo_model.</a> Note: should be updated, see https://github.com/NeuroML/NeuroML2/issues/42 </i></span>    </td>
+      <span  style="color:dimgrey"><i>Simple dimensionless model of spiking cell from FitzHugh and Nagumo. Superseded by <b>fitzHughNagumo1969Cell</b> (See https://github.com/NeuroML/NeuroML2/issues/42) </i></span>    </td>
   </tr>
   <tr>
   <td width="70" rowspan='1'>
