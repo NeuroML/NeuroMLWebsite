@@ -1,6 +1,6 @@
 
 
-<% nml2_version = 'v2.0' %>  <!-- TODO: find a global location for this...-->
+<% nml2_version = 'v2.1' %>  <!-- TODO: find a global location for this...-->
 
 
 <!-- MAIN -->
@@ -23,33 +23,33 @@
                 <li><a href="/lems_dev" > LEMS and NeuroML 2 </a></li>
                 <li class="active"><a href="/mappings" > Mapping to other formats </a></li>
             </ul>
-            
+
             <img src="../images/tabs-divider.png" height="2" width="100%" />
 
             <h1>Mapping NeuroML & LEMS to other simulators and output formats</h1>
             <br/>
 
-            <p>A key requirement in the development of NeuroML 2 was making it easier to map the model elements to other formats, not only to dedicated neuronal simulators, but to other 
-            generic numerical solvers and even graphical formats to increase accessibility of the model structure and dynamics. This is enabled by having access to the model definitions in 
+            <p>A key requirement in the development of NeuroML 2 was making it easier to map the model elements to other formats, not only to dedicated neuronal simulators, but to other
+            generic numerical solvers and even graphical formats to increase accessibility of the model structure and dynamics. This is enabled by having access to the model definitions in
             a machine readable form  using LEMS.</p>
-            
+
             <p align="center"><img alt="Mapping to other formats" src="images/Figure7a.png"/></p>
-                
+
 
 
             <p align="center"><i>This figure (taken from <a href="http://journal.frontiersin.org/Journal/10.3389/fninf.2014.00079/abstract">Cannon et al. 2014</a>)
                     shows illustrates how biological models at different physical scales and with varying levels of biological realism can be mapped into representations in LEMS.
-                    This mapping to LEMS can be made through the use of predefined, domain specific <b>ComponentType</b> definitions 
-                    (e.g. for <a href="http://www.neuroml.org/NeuroML2CoreTypes/Cells.html">NeuroML 2</a>) or by importing from other structured modelling formats (e.g. SBML). 
-                    Files in LEMS can then be simulated with the reference implementations, <a href="https://github.com/LEMS/jLEMS">jLEMS</a> or 
-                    <a href="https://github.com/LEMS/pyLEMS">PyLEMS</a>, or exported to a number of other formats. <a href="https://github.com/NeuroML/jNeuroML">jNeuroML</a> is a 
-                    collection of utilities in Java for handling these transformations. Export formats include neuronal simulators <a href="#NEURON">NEURON</a> and 
-                    <a href="#NEURON">Brian</a>, <a href="#MATLAB">MATLAB</a> or <a href="#C">C code</a> for simulating 
+                    This mapping to LEMS can be made through the use of predefined, domain specific <b>ComponentType</b> definitions
+                    (e.g. for <a href="http://www.neuroml.org/NeuroML2CoreTypes/Cells.html">NeuroML 2</a>) or by importing from other structured modelling formats (e.g. SBML).
+                    Files in LEMS can then be simulated with the reference implementations, <a href="https://github.com/LEMS/jLEMS">jLEMS</a> or
+                    <a href="https://github.com/LEMS/pyLEMS">PyLEMS</a>, or exported to a number of other formats. <a href="https://github.com/NeuroML/jNeuroML">jNeuroML</a> is a
+                    collection of utilities in Java for handling these transformations. Export formats include neuronal simulators <a href="#NEURON">NEURON</a> and
+                    <a href="#NEURON">Brian</a>, <a href="#MATLAB">MATLAB</a> or <a href="#C">C code</a> for simulating
                         the models with solvers in these languages, <a href="#Modelica">Modelica</a>, <a href="#XPP">XPP</a> and <a href="#SBML">SBML</a>.</i></p>
 
 
 
-            
+
             <a name="NEURON">&nbsp;</a>
             <h3>NEURON</h3>
             <p>A wide range of single cells (abstract to multicompartmental), networks and non NeuroML LEMS models can be mapped to NEURON (hoc and mod files).</p>
@@ -57,7 +57,7 @@
             <p class="code">jnml LEMS_MyModel.xml -neuron [-nogui] [-run]</p>
             <p>The Java source for this mapping is <a href="https://github.com/NeuroML/org.neuroml.export/blob/master/src/main/java/org/neuroml/export/neuron/NeuronWriter.java">here</a>
                 (<a href="https://github.com/NeuroML/org.neuroml.export/blob/development/src/main/java/org/neuroml/export/neuron/NeuronWriter.java">active development version</a>).</p>
-            
+
             <a name="SBML">&nbsp;</a>
             <h3>SBML</h3>
             <p>There is a mapping of LEMS Components to SBML. This currently focuses on single Components (potentially in a population of size 1 in a network), since there is not
@@ -70,7 +70,7 @@
                 (<a href="https://github.com/NeuroML/org.neuroml.export/blob/development/src/main/java/org/neuroml/export/sbml/SBMLWriter.java">active development version</a>).
             Import of SBML to LEMS is <a href="https://github.com/NeuroML/org.neuroml.import/blob/master/src/main/java/org/neuroml/importer/sbml/SBMLImporter.java">here</a>
             (<a href="https://github.com/NeuroML/org.neuroml.import/blob/development/src/main/java/org/neuroml/importer/sbml/SBMLImporter.java">active development version</a>)</p>
-            
+
             <a name="Brian">&nbsp;</a>
             <h3>Brian</h3>
             <p>There is a mapping of LEMS Components to Brian. This currently focuses on single Components.</p>
@@ -83,14 +83,14 @@
             <h3>Other formats</h3>
             <p>A full list of export formats using <a href="https://github.com/NeuroML/jNeuroML">jNeuroML</a> can be found with:</p>
             <p class="code">jnml -help</p>
-            <p>The Java source for all these mapping is <a href="https://github.com/NeuroML/org.neuroml.export/blob/master/src/main/java/org/neuroml/export">here</a> 
+            <p>The Java source for all these mapping is <a href="https://github.com/NeuroML/org.neuroml.export/blob/master/src/main/java/org/neuroml/export">here</a>
                 and <a href="https://github.com/NeuroML/org.neuroml.export/tree/master/src/main/java/org/lemsml/export">here</a>.</p>
 
             <br/>
             <h2>How do I convert my models to NeuroML 2?</h3>
-            
+
             <br/>
-            <p>Some pointers for converting models to NeuroML 2 can be found on the OpenSource Brain website 
+            <p>Some pointers for converting models to NeuroML 2 can be found on the OpenSource Brain website
             <a href="http://www.opensourcebrain.org/docs#Converting_To_NeuroML2">here</a>.
 
             <br/>
@@ -105,4 +105,3 @@
     <!-- ENDS wrapper-main -->
 </div>
 <!-- ENDS MAIN -->
-
