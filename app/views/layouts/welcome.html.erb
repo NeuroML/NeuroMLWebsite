@@ -23,9 +23,9 @@
         <!-- <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/ie8-hacks.css" />-->
         <%= stylesheet_link_tag 'ie8-hacks', :media => 'screen' %>
         <![endif]-->
-        <!-- ENDS CSS -->	
+        <!-- ENDS CSS -->
 
-        <!-- GOOGLE FONTS 
+        <!-- GOOGLE FONTS
         <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>-->
 
         <!-- JS -->
@@ -36,12 +36,12 @@
         <script>
 
 
-            //var $j = jQuery.noConflict(); 
+            //var $j = jQuery.noConflict();
             //jQuery(document).ready(function($j) { $j("#add-iframe").fancybox({ 'hideOnContentClick': true }); });
             /*
              $(document).ready(function(){
              $('a.fancybox').livequery(function(){
-             alert("veer"); 
+             alert("veer");
              $(this).fancybox({
              'hideOnContentClick': true,
              'hideOnOverlayClick': true,
@@ -50,9 +50,9 @@
              'height'        :   500,
              'transitionIn'  :   'elastic',
              'transitionOut' :   'elastic',
-             'speedIn'       :   200, 
+             'speedIn'       :   200,
              'speedOut'      :   200,
-             }); 
+             });
              });
              })*/
         </script>
@@ -67,12 +67,12 @@
         <%= javascript_include_tag  'js/jquery.cycle.all' %>
         <!--<script type="text/javascript" src="javascripts/js/custom.js"></script>-->
         <%= javascript_include_tag  'js/custom' %>
-        <%= javascript_include_tag 'prototype' %>		
+        <%= javascript_include_tag 'prototype' %>
         <%= javascript_include_tag 'scriptaculous' %>
         <%= javascript_include_tag 'effects' %>
         <!-- Isotope -->
         <!--<script src="javascripts/js/jquery.isotope.min.js"></script>-->
-        <%= javascript_include_tag  'js/jquery.isotope.min' %>	
+        <%= javascript_include_tag  'js/jquery.isotope.min' %>
         <!--[if IE]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -166,11 +166,11 @@
     </head>
 
     <body class="home">
-        
+
 
         <!-- HEADER -->
         <div id="header">
-            
+
             <!-- wrapper-header --><!-- <a class="various fancybox" href="/model_info?model_id=NMLCL000005">Ajax</a>-->
             <div class="wrapper">
                 <a href="/home">
@@ -180,12 +180,12 @@
                     <span>A Model Description Language for Computational Neuroscience</span>
                 </div>
 
-                
+
 
             </div>
             <!-- ENDS search -->
         </div>
-        <!-- ENDS wrapper-header -->					
+        <!-- ENDS wrapper-header -->
     </div>
     <!-- ENDS HEADER -->
 
@@ -227,7 +227,7 @@
                     <li <% if index == 1 %>class="<%= active_class %>" <% end %> ><a href="/home">Home</a></li>
                     <li <% if documents == 1 %>class="<%= active_class %>" <% end %> ><a href="#">Documents</a>
                         <ul>
-                            <li><a href="/neuromlv2"><span>NeuroML v2.0</span></a></li>
+                            <li><a href="/neuromlv2"><span>NeuroML v2</span></a></li>
                             <li><a href="http://lems.github.io/LEMS/"><span>LEMS</span></a></li>
                             <li><a href="/relevant_publications"><span>Publications</span></a></li>
                             <li><a href="/workshops"><span>Workshop Reports</span></a></li>
@@ -249,8 +249,8 @@
                             <!--									<li><a href="/model_submit"><span>Submit Models</span></a></li>
                                                                <li><a href="/search_result"><span>Search Models</span></a></li>
                                                                <li><a href="/add_cell"><span>Add Cell</span></a></li>
-                            -->									
-                        </ul> 
+                            -->
+                        </ul>
                     </li>
                     <li <% if community == 1 %>class="<%= active_class %>" <% end %>><a href="#">Community</a>
                         <ul>
@@ -279,7 +279,7 @@
     </div>
     <!-- ENDS Menu -->
 
-    <%= yield %>	
+    <%= yield %>
 
     <!-- Twitter -->
     <div id="twitter">
@@ -293,8 +293,8 @@
                 <ul class="tweet_list">
                     <% @tweets.each do |tweet| %>
                     <li><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></li>
-                    <% end %> 
-                </ul>				
+                    <% end %>
+                </ul>
             </div>
         </div>
     </div>
@@ -310,10 +310,10 @@
                 <li class="col">
                     <h6>Documents</h6>
                     <ul>
-                        <li class="page_item"><a href="neuromlv2">NeuroML v2.0</a></li>
+                        <li class="page_item"><a href="neuromlv2">NeuroML v2</a></li>
                         <li class="page_item"><a href="http://lems.github.io/LEMS/">LEMS</a></li>
                         <li class="page_item"><a href="/relevant_publications">Publications</a></li>
-                        <li class="page_item"><a href="/workshops">Workshop Reports</a></li> 
+                        <li class="page_item"><a href="/workshops">Workshop Reports</a></li>
 
                     </ul>
                 </li>
@@ -330,7 +330,7 @@
                     <h6>Models</h6>
                     <ul>
                         <li class="page_item"><a href="/browse_models">Browse Models</a></li>
-                     
+
                     </ul>
                 </li>
                 <li  class="col">
@@ -372,8 +372,8 @@
 
                 </ul>
 
-            </div>	
-            <!-- Social 
+            </div>
+            <!-- Social
 <ul class="social ">
 <li><a href="http://www.facebook.com" class="poshytip  facebook" title="Become a fan"></a></li>
 <li><a href="http://www.twitter.com/NeuroML" class="poshytip twitter" title="Follow our tweets"></a></li>
