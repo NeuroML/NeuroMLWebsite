@@ -1,7 +1,7 @@
 NeuroML Website
 ===============
 
-The latest version of the NeuroML website.
+The NeuroML homepage. Note: main NeuroML docs now at https://docs.neuroml.org & source of those at https://github.com/NeuroML/Documentation
 
 If there are any comments/suggestions for updates to the NeuroML website, please open an issue here: https://github.com/NeuroML/NeuroMLWebsite/issues.
 
