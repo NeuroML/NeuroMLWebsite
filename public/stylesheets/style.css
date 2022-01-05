@@ -33,8 +33,8 @@ body {
 
  background-attachment: fixed;
     background-clip: border-box;
-    background-color: #14181B;
-    background-image: url("../images/neuron_black_gs.jpg");
+    background-color: #ffffff;
+    /*background-image: url("../images/neuron_black_gs.jpg");*/
     background-origin: padding-box;
     background-position: center top;
     background-repeat: no-repeat;
@@ -69,7 +69,7 @@ top: 85px;
 left: 145px;
 left: 5;
 font-style: italic;
-color: #dadada;
+color: #111111;
 font-size: 14px;
 }
 #main{
