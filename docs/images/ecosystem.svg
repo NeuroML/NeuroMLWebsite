@@ -9,7 +9,7 @@
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="ecosystem.svg"
-   inkscape:export-filename="ecosystem.png"
+   inkscape:export-filename="ecosystem-plain.svg"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -29,8 +29,8 @@
      showgrid="false"
      inkscape:snap-global="true"
      inkscape:zoom="0.95371126"
-     inkscape:cx="145.22215"
-     inkscape:cy="144.17361"
+     inkscape:cx="31.980329"
+     inkscape:cy="146.79495"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -194,131 +194,170 @@
      inkscape:label="bubbles"
      transform="translate(-4.1178373,-97.082567)"
      style="display:inline">
-    <rect
-       style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
-       id="rect59"
-       width="40.074421"
-       height="15.796462"
-       x="74.381416"
-       y="183.91072"
-       ry="7.898231" />
-    <text
-       xml:space="preserve"
-       style="font-size:6.34998px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.15875"
-       x="90.460747"
-       y="194.22119"
-       id="text63"><tspan
-         sodipodi:role="line"
-         id="tspan61"
-         style="stroke-width:0.15875"
+    <g
+       id="g715"
+       onmouseover="document.body.style.cursor = 'pointer'"
+       onmouseout="document.body.style.cursor = 'default'"
+       onclick="window.open('https://docs.neuroml.org/Userdocs/OptimisingNeuroMLModels.html')">
+      <rect
+         style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
+         id="rect59"
+         width="40.074421"
+         height="15.796462"
+         x="74.381416"
+         y="183.91072"
+         ry="7.898231" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.34998px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.15875"
          x="90.460747"
-         y="194.22119">Fit</tspan></text>
-    <rect
-       style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
-       id="rect1058"
-       width="40.074421"
-       height="15.796462"
-       x="72.264801"
-       y="97.292824"
-       ry="7.898231" />
-    <text
-       xml:space="preserve"
-       style="font-size:6.34998px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.15875"
-       x="81.742996"
-       y="106.97337"
-       id="text7839"><tspan
-         sodipodi:role="line"
-         id="tspan7837"
-         style="stroke-width:0.15875"
+         y="194.22119"
+         id="text63"><tspan
+           sodipodi:role="line"
+           id="tspan61"
+           style="stroke-width:0.15875"
+           x="90.460747"
+           y="194.22119">Fit</tspan></text>
+    </g>
+    <g
+       id="g649"
+       onclick="window.open('https://docs.neuroml.org/Userdocs/CreatingNeuroMLModels.html')"
+       onmouseover="document.body.style.cursor = 'pointer'"
+       onmouseout="document.body.style.cursor = 'default'">
+      <rect
+         style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
+         id="rect1058"
+         width="40.074421"
+         height="15.796462"
+         x="72.264801"
+         y="97.292824"
+         ry="7.898231" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.34998px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.15875"
          x="81.742996"
-         y="106.97337">Create</tspan></text>
-    <rect
-       style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
-       id="rect22003"
-       width="40.074421"
-       height="15.796462"
-       x="165.80774"
-       y="140.60176"
-       ry="7.898231" />
-    <text
-       xml:space="preserve"
-       style="font-size:6.34998px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.15875"
-       x="173.1946"
-       y="150.86729"
-       id="text9602"><tspan
-         sodipodi:role="line"
-         id="tspan9600"
-         style="stroke-width:0.15875"
+         y="106.97337"
+         id="text7839"><tspan
+           sodipodi:role="line"
+           id="tspan7837"
+           style="stroke-width:0.15875"
+           x="81.742996"
+           y="106.97337">Create</tspan></text>
+    </g>
+    <g
+       id="g724"
+       onmouseover="document.body.style.cursor = 'pointer'"
+       onmouseout="document.body.style.cursor = 'default'"
+       onclick="window.open('https://docs.neuroml.org/Userdocs/ValidatingNeuroMLModels.html')">
+      <rect
+         style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
+         id="rect22003"
+         width="40.074421"
+         height="15.796462"
+         x="165.80774"
+         y="140.60176"
+         ry="7.898231" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.34998px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.15875"
          x="173.1946"
-         y="150.86729">Validate</tspan></text>
-    <rect
-       style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
-       id="rect22001"
-       width="40.074421"
-       height="15.796462"
-       x="135.3688"
-       y="105.02198"
-       ry="7.898231" />
-    <text
-       xml:space="preserve"
-       style="font-size:6.34998px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.15875"
-       x="141.58209"
-       y="115.28751"
-       id="text9610"><tspan
-         sodipodi:role="line"
-         id="tspan9608"
-         style="stroke-width:0.15875"
+         y="150.86729"
+         id="text9602"><tspan
+           sodipodi:role="line"
+           id="tspan9600"
+           style="stroke-width:0.15875"
+           x="173.1946"
+           y="150.86729">Validate</tspan></text>
+    </g>
+    <g
+       id="g582"
+       onmouseover="document.body.style.cursor = 'pointer'"
+       onmouseout="document.body.style.cursor = 'default'"
+       onclick="window.open('https://docs.neuroml.org/Userdocs/VisualisingNeuroMLModels.html')">
+      <rect
+         style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
+         id="rect22001"
+         width="40.074421"
+         height="15.796462"
+         x="135.3688"
+         y="105.02198"
+         ry="7.898231" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.34998px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.15875"
          x="141.58209"
-         y="115.28751">Visualise</tspan></text>
-    <rect
-       style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
-       id="rect21999"
-       width="40.074421"
-       height="15.796462"
-       x="135.3688"
-       y="176.18156"
-       ry="7.898231" />
-    <text
-       xml:space="preserve"
-       style="font-size:6.34998px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.15875"
-       x="141.33714"
-       y="186.4471"
-       id="text9618"><tspan
-         sodipodi:role="line"
-         id="tspan9616"
-         style="stroke-width:0.15875"
+         y="115.28751"
+         id="text9610"><tspan
+           sodipodi:role="line"
+           id="tspan9608"
+           style="stroke-width:0.15875"
+           x="141.58209"
+           y="115.28751">Visualise</tspan></text>
+    </g>
+    <g
+       id="g734"
+       onmouseover="document.body.style.cursor = 'pointer'"
+       onmouseout="document.body.style.cursor = 'default'"
+       onclick="window.open('https://docs.neuroml.org/Userdocs/SimulatingNeuroMLModels.html')">
+      <rect
+         style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
+         id="rect21999"
+         width="40.074421"
+         height="15.796462"
+         x="135.3688"
+         y="176.18156"
+         ry="7.898231" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.34998px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.15875"
          x="141.33714"
-         y="186.4471">Simulate</tspan></text>
-    <rect
-       style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
-       id="rect21997"
-       width="40.074421"
-       height="15.796462"
-       x="13.182333"
-       y="162.99289"
-       ry="7.898231"
-       onclick="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html"
-       onmouseover="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html"
-       onmousedown="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html"
-       onmouseup="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html" />
-    <text
-       xml:space="preserve"
-       style="font-size:6.34998px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.15875"
-       x="24.017035"
-       y="173.25842"
-       id="text9626"
-       onclick="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html"
-       onmouseover="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html"
-       onmousedown="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html"
-       onmouseup="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html"><tspan
-         sodipodi:role="line"
-         id="tspan9624"
-         style="stroke-width:0.15875"
+         y="186.4471"
+         id="text9618"><tspan
+           sodipodi:role="line"
+           id="tspan9616"
+           style="stroke-width:0.15875"
+           x="141.33714"
+           y="186.4471">Simulate</tspan></text>
+    </g>
+    <g
+       id="g729"
+       onmouseover="document.body.style.cursor = 'pointer'"
+       onmouseout="document.body.style.cursor = 'default'"
+       onclick="window.open('https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html')">
+      <rect
+         style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
+         id="rect21997"
+         width="40.074421"
+         height="15.796462"
+         x="13.182333"
+         y="162.99289"
+         ry="7.898231"
+         onclick="alert('https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html')"
+         onmouseover="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html"
+         onmousedown="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html"
+         onmouseup="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.34998px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.15875"
          x="24.017035"
-         y="173.25842">Share</tspan></text>
+         y="173.25842"
+         id="text9626"
+         onclick="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html"
+         onmouseover="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html"
+         onmousedown="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html"
+         onmouseup="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html"><tspan
+           sodipodi:role="line"
+           id="tspan9624"
+           style="stroke-width:0.15875"
+           x="24.017035"
+           y="173.25842">Share</tspan></text>
+    </g>
     <g
        id="g10205"
-       onmousedown="https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html">
+       onmousedown=""
+       onmouseover="document.body.style.cursor = 'pointer'"
+       onmouseout="document.body.style.cursor = 'default'"
+       onclick="window.open('https://docs.neuroml.org/Userdocs/FindingNeuroMLModels.html')">
       <rect
          style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
          id="rect21995"
