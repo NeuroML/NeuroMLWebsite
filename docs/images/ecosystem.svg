@@ -29,8 +29,8 @@
      showgrid="false"
      inkscape:snap-global="true"
      inkscape:zoom="0.95371126"
-     inkscape:cx="31.980329"
-     inkscape:cy="146.79495"
+     inkscape:cx="90.698311"
+     inkscape:cy="147.31922"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -245,10 +245,10 @@
            y="106.97337">Create</tspan></text>
     </g>
     <g
-       id="g724"
+       id="g505"
+       onclick="window.open('https://docs.neuroml.org/Userdocs/VisualisingNeuroMLModels.html')"
        onmouseover="document.body.style.cursor = 'pointer'"
-       onmouseout="document.body.style.cursor = 'default'"
-       onclick="window.open('https://docs.neuroml.org/Userdocs/ValidatingNeuroMLModels.html')">
+       onmouseout="document.body.style.cursor = 'default'">
       <rect
          style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
          id="rect22003"
@@ -267,13 +267,13 @@
            id="tspan9600"
            style="stroke-width:0.15875"
            x="173.1946"
-           y="150.86729">Validate</tspan></text>
+           y="150.86729">Visualise</tspan></text>
     </g>
     <g
-       id="g582"
+       id="g579"
        onmouseover="document.body.style.cursor = 'pointer'"
        onmouseout="document.body.style.cursor = 'default'"
-       onclick="window.open('https://docs.neuroml.org/Userdocs/VisualisingNeuroMLModels.html')">
+       onclick="window.open('https://docs.neuroml.org/Userdocs/ValidatingNeuroMLModels.html')">
       <rect
          style="fill:#c5cce3;fill-opacity:1;stroke:none;stroke-width:0.232133;stroke-linejoin:round"
          id="rect22001"
@@ -292,7 +292,7 @@
            id="tspan9608"
            style="stroke-width:0.15875"
            x="141.58209"
-           y="115.28751">Visualise</tspan></text>
+           y="115.28751">Validate</tspan></text>
     </g>
     <g
        id="g734"
