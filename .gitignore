@@ -39,3 +39,4 @@
 /app/views/welcome/tool_support.html.erb~
 /public/images/salva_lab_small.png
 /runme.sh
+.DS_Store
