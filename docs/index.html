@@ -563,6 +563,21 @@ rect.rects:hover {
         <form role="search" id="search">
           <div class="input-group mb-3">
             <input type="search" id="query" class="form-control" placeholder="Search docs" aria-label="Search docs" aria-describedby="submit-button">
+            <input type="hidden" name="source" value="docs">
+            <button class="btn btn-outline-secondary" type="submit" id="submit-button">Go</button>
+          </div>
+        </form>
+        <form role="search" id="searchosb">
+          <div class="input-group mb-3">
+            <input type="search" id="queryosb" class="form-control" placeholder="Search models on OSB" aria-label="Search models on OSB" aria-describedby="submit-button">
+            <input type="hidden" name="source" value="osb">
+            <button class="btn btn-outline-secondary" type="submit" id="submit-button">Go</button>
+          </div>
+        </form>
+        <form role="search" id="searchnmldb">
+          <div class="input-group mb-3">
+            <input type="search" id="querynmldb" class="form-control" placeholder="Search models on NeuroML-DB" aria-label="Search models on NeuroML-DB" aria-describedby="submit-button">
+            <input type="hidden" name="source" value="nmldb">
             <button class="btn btn-outline-secondary" type="submit" id="submit-button">Go</button>
           </div>
         </form>
@@ -629,18 +644,47 @@ rect.rects:hover {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>-->
     <script>
-      const f = document.getElementById('search');
-      const q = document.getElementById('query');
       const docsearch = 'https://docs.neuroml.org/search.html?q=';
+      const osbsearch = 'https://github.com/search?q=org%3AOpenSourceBrain+language%3Axml+';
+      const nmldbsearch = 'https://neuroml-db.org/search_model?q=';
 
-      function submitted(event) {
-        event.preventDefault();
-        const url = docsearch + q.value;
-        const win = window.open(url, '_self');
-        win.focus();
-      }
+      const allForms = document.querySelectorAll("form");
 
-      f.addEventListener('submit', submitted);
+      allForms.forEach(form => {
+
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          const queryInput = this.querySelector('input[type="search"]');
+          const query = queryInput ? encodeURIComponent(queryInput.value) : '';
+
+          const sourceInput = this.querySelector('input[type="hidden"][name="source"]');
+          const source = sourceInput ? sourceInput.value: "Unknown";
+
+          let url;
+          let win;
+
+          switch (source) {
+            case "docs":
+              url = docsearch + query;
+              window.open(url, '_self');
+              break;
+
+            case "osb":
+              url = osbsearch + query + '&type=code';
+              window.open(url, '_self');
+              break;
+
+            case "nmldb":
+              url = nmldbsearch + query;
+              window.open(url, '_self');
+              break;
+
+            default:
+              break;
+
+          }
+        })
+      })
     </script>
   </body>
 </html>
